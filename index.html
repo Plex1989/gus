@@ -22,171 +22,144 @@
                         display: ['Space Grotesk', 'sans-serif'],
                     },
                     colors: {
-                        mexgold: {
-                            50: '#fffbeb',
-                            100: '#fef3c7',
+                        gold: {
                             300: '#fde047',
                             400: '#facc15',
                             500: '#eab308',
                             600: '#ca8a04',
                             700: '#a16207',
-                            gold: '#d4af37',
-                            amber: '#f59e0b',
-                            bright: '#ffd700',
-                            dark: '#854d0e'
-                        },
-                        mexblack: {
-                            950: '#09090b',
-                            900: '#121216',
-                            800: '#1a1a20',
-                            700: '#272730'
                         }
                     }
                 }
             }
         }
     </script>
-    
     <style>
         body {
             background-color: #09090b;
-            color: #f3f4f6;
+            color: #f4f4f5;
         }
 
-        /* Ambient Glow Orbs inspired by the Black & Gold Mexico Jersey Kit */
+        /* Ambient Glow Effects - Black & Gold Theme */
         .glow-orb-gold {
-            background: radial-gradient(circle, rgba(212, 175, 55, 0.35) 0%, rgba(9, 9, 11, 0) 70%);
+            background: radial-gradient(circle, rgba(234, 179, 8, 0.22) 0%, rgba(9, 9, 11, 0) 75%);
         }
-        .glow-orb-amber {
-            background: radial-gradient(circle, rgba(245, 158, 11, 0.25) 0%, rgba(9, 9, 11, 0) 70%);
+        .glow-orb-white {
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, rgba(9, 9, 11, 0) 70%);
         }
 
-        /* Glassmorphism Panels with Gold Foil Trims */
+        /* Glassmorphism Panels */
         .glass-card {
-            background: rgba(18, 18, 22, 0.75);
+            background: rgba(24, 24, 27, 0.7);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(212, 175, 55, 0.2);
-        }
-        .glass-card-gold {
-            background: rgba(24, 24, 30, 0.85);
-            backdrop-filter: blur(16px);
-            border: 1px solid rgba(251, 191, 36, 0.4);
-            box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.15);
+            border: 1px solid rgba(234, 179, 8, 0.18);
         }
 
-        /* Gold Foil & Metallic Gradients */
+        /* Text Gradients */
         .text-gradient-gold {
-            background: linear-gradient(135deg, #ffffff 0%, #fef08a 40%, #f59e0b 80%, #d4af37 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .text-gradient-champagne {
-            background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 60%, #facc15 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #facc15 50%, #ca8a04 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        /* Custom Mexico Black & Gold Action Button */
-        .btn-action-primary {
-            background: linear-gradient(135deg, #f59e0b 0%, #d4af37 50%, #92400e 100%);
+        /* Primary Button */
+        .btn-gold {
+            background: linear-gradient(135deg, #facc15 0%, #ca8a04 100%);
             color: #09090b;
-            box-shadow: 0 10px 30px -5px rgba(245, 158, 11, 0.4);
+            box-shadow: 0 10px 25px -5px rgba(202, 138, 4, 0.4);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .btn-action-primary:hover {
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 15px 35px -5px rgba(245, 158, 11, 0.6);
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px -5px rgba(234, 179, 8, 0.6);
         }
 
-        /* Secondary Metallic Outline Button */
-        .btn-action-gold-outline {
-            background: rgba(18, 18, 22, 0.9);
-            border: 2px solid #f59e0b;
-            color: #fef08a;
-            box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.25);
+        /* Outline Button */
+        .btn-gold-outline {
+            border: 1px solid rgba(250, 204, 21, 0.6);
+            color: #facc15;
             transition: all 0.3s ease;
         }
-        .btn-action-gold-outline:hover {
-            background: #f59e0b;
-            color: #09090b;
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 15px 30px -5px rgba(245, 158, 11, 0.5);
+        .btn-gold-outline:hover {
+            background: rgba(250, 204, 21, 0.1);
+            border-color: #facc15;
+            color: #ffffff;
         }
     </style>
 </head>
-<body class="font-sans antialiased selection:bg-amber-500 selection:text-black overflow-x-hidden">
+<body class="font-sans antialiased selection:bg-gold-500 selection:text-black overflow-x-hidden">
 
     <!-- NAVBAR -->
-    <nav class="fixed top-0 left-0 right-0 z-50 glass-card border-b border-amber-500/20">
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-card border-b border-zinc-800/80">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
-            <a href="#" class="flex items-center gap-3 group shrink-0">
-                <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-amber-600 via-amber-400 to-yellow-200 flex items-center justify-center text-slate-950 font-black text-2xl shadow-lg shadow-amber-500/30 group-hover:scale-105 transition-transform">
+            <a href="#" class="flex items-center gap-3 shrink-0">
+                <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-zinc-950 via-gold-600 to-gold-400 flex items-center justify-center text-zinc-950 font-black text-2xl shadow-lg shadow-gold-500/20 border border-gold-400/30">
                     G
                 </div>
                 <div>
-                    <span class="font-display font-black text-xl tracking-wider text-white block leading-none">GUSTAVO ORTIZ</span>
-                    <span class="text-[10px] text-amber-400 font-bold tracking-widest uppercase mt-1 block">Sub-11 Tenis de Mesa México</span>
+                    <span class="font-display font-black text-lg sm:text-xl tracking-wider text-white block leading-none">GUSTAVO ORTIZ</span>
+                    <span class="text-[10px] text-gold-400 font-bold tracking-widest uppercase mt-1 block">Sub-11 Tenis de Mesa México</span>
                 </div>
             </a>
 
             <!-- Desktop Links -->
-            <div class="hidden lg:flex items-center gap-4 xl:gap-6 font-semibold text-xs uppercase tracking-wider text-slate-300">
-                <a href="#inicio" class="hover:text-amber-400 transition-colors whitespace-nowrap">Inicio</a>
-                <a href="#reciente" class="hover:text-amber-300 transition-colors whitespace-nowrap">Triunfo Reciente</a>
-                <a href="#entrenador" class="hover:text-amber-400 transition-colors whitespace-nowrap">Profe Levi</a>
-                <a href="#trayectoria" class="hover:text-amber-300 transition-colors whitespace-nowrap">Trayectoria</a>
-                <a href="#entrenamiento" class="hover:text-amber-300 transition-colors whitespace-nowrap">Velódromo</a>
-                <a href="#palmares" class="hover:text-amber-400 transition-colors whitespace-nowrap">Medallas</a>
-                <a href="#aficion" class="hover:text-amber-300 transition-colors whitespace-nowrap">Mensajes</a>
+            <div class="hidden lg:flex items-center gap-6 font-semibold text-xs uppercase tracking-widest text-zinc-300">
+                <a href="#inicio" class="hover:text-gold-400 transition-colors">Inicio</a>
+                <a href="#reciente" class="hover:text-gold-400 transition-colors">Triunfo Reciente</a>
+                <a href="#entrenador" class="hover:text-gold-400 transition-colors">Profe Levi</a>
+                <a href="#trayectoria" class="hover:text-gold-400 transition-colors">Trayectoria</a>
+                <a href="#velodromo" class="hover:text-gold-400 transition-colors">Velódromo</a>
+                <a href="#medallas" class="hover:text-gold-400 transition-colors">Medallas</a>
+                <a href="#apoyo" class="hover:text-gold-400 transition-colors">Apoyo</a>
             </div>
 
-            <!-- Header Action Button -->
+            <!-- Header Action Button (Fixed Overflow Issue) -->
             <div class="hidden sm:flex items-center shrink-0">
-                <a href="#entrenador" class="whitespace-nowrap px-4 py-2.5 rounded-full bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-600 text-slate-950 font-black text-xs uppercase tracking-wider shadow-lg shadow-amber-500/25 hover:scale-105 transition-all flex items-center gap-2">
-                    <i class="fa-solid fa-heart"></i>
-                    <span>Mensaje al Profe Levi</span>
+                <a href="#apoyo" class="btn-gold px-5 py-2.5 rounded-full font-black text-xs uppercase tracking-wider whitespace-nowrap flex items-center gap-2">
+                    <i class="fa-solid fa-hand-holding-dollar text-sm"></i>
+                    <span>Contribuir</span>
                 </a>
             </div>
 
             <!-- Mobile Menu Toggle -->
-            <button id="mobileBtn" class="lg:hidden text-amber-400 hover:text-white p-2">
+            <button id="mobileBtn" class="lg:hidden text-zinc-200 hover:text-white p-2">
                 <i class="fa-solid fa-bars text-2xl"></i>
             </button>
         </div>
 
         <!-- Mobile Menu Dropdown -->
-        <div id="mobileMenu" class="hidden lg:hidden bg-mexblack-950/95 border-b border-amber-500/30 px-6 py-6 space-y-4">
-            <a href="#inicio" class="block text-slate-200 font-bold text-sm uppercase">Inicio</a>
-            <a href="#reciente" class="block text-amber-400 font-bold text-sm uppercase">Triunfo Reciente</a>
-            <a href="#entrenador" class="block text-amber-300 font-bold text-sm uppercase">Entrenador Levi Báez</a>
-            <a href="#trayectoria" class="block text-slate-200 font-bold text-sm uppercase">Trayectoria de Gus</a>
-            <a href="#entrenamiento" class="block text-slate-200 font-bold text-sm uppercase">Velódromo de Xalapa</a>
-            <a href="#palmares" class="block text-slate-200 font-bold text-sm uppercase">Medallas</a>
-            <a href="#aficion" class="block text-slate-200 font-bold text-sm uppercase">Apoyo Afición</a>
+        <div id="mobileMenu" class="hidden lg:hidden bg-zinc-950/98 border-b border-zinc-800 px-6 py-6 space-y-4">
+            <a href="#inicio" class="block text-zinc-200 font-bold text-sm uppercase">Inicio</a>
+            <a href="#reciente" class="block text-gold-400 font-bold text-sm uppercase">Triunfo Reciente</a>
+            <a href="#entrenador" class="block text-zinc-200 font-bold text-sm uppercase">Profe Levi Báez</a>
+            <a href="#trayectoria" class="block text-zinc-200 font-bold text-sm uppercase">Trayectoria de Gus</a>
+            <a href="#velodromo" class="block text-zinc-200 font-bold text-sm uppercase">Velódromo de Xalapa</a>
+            <a href="#medallas" class="block text-zinc-200 font-bold text-sm uppercase">Medallas</a>
+            <a href="#apoyo" class="block text-gold-400 font-bold text-sm uppercase">Patrocinios y Apoyo</a>
         </div>
     </nav>
 
     <!-- HERO SECTION -->
     <section id="inicio" class="min-h-screen pt-28 pb-20 relative flex items-center justify-center overflow-hidden">
         
-        <!-- Ambient Glow Orbs -->
+        <!-- Background Ambient Glow Orbs -->
         <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] glow-orb-gold rounded-full pointer-events-none opacity-80"></div>
-        <div class="absolute bottom-10 right-10 w-[400px] h-[400px] glow-orb-amber rounded-full pointer-events-none opacity-50"></div>
+        <div class="absolute bottom-10 right-10 w-[400px] h-[400px] glow-orb-white rounded-full pointer-events-none opacity-30"></div>
 
-        <!-- Hero Background Image overlay -->
+        <!-- Hero Background Image Overlay -->
         <div class="absolute inset-0 z-0">
-            <img src="gustavo-hero.jpg" alt="[Gustavo Ortiz Tenis de Mesa]" class="w-full h-full object-cover object-center opacity-20 filter contrast-125" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534158914592-062992fbe900?q=80&w=1600&auto=format&fit=crop';">
-            <div class="absolute inset-0 bg-gradient-to-t from-mexblack-950 via-mexblack-950/80 to-mexblack-950/90"></div>
+            <img src="gustavo-hero.jpg" alt="[Gustavo Ortiz Tenis de Mesa]" class="w-full h-full object-cover object-center opacity-25 filter contrast-125" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534158914592-062992fbe900?q=80&w=1600&auto=format&fit=crop';">
+            <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-zinc-950/90"></div>
         </div>
 
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-8">
             
-            <!-- Badge / Tagline -->
-            <div class="inline-flex items-center gap-3 px-6 py-2.5 rounded-full glass-card border border-amber-500/40 shadow-2xl">
-                <span class="w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse"></span>
-                <span class="text-xs sm:text-sm font-black tracking-widest text-slate-200 uppercase">
-                    VELOCIDAD <span class="text-amber-400">•</span> DISCIPLINA <span class="text-amber-300">•</span> VICTORIA
+            <!-- Category Badge -->
+            <div class="inline-flex items-center gap-3 px-6 py-2.5 rounded-full glass-card border border-gold-500/30 shadow-2xl">
+                <span class="w-2.5 h-2.5 rounded-full bg-gold-400 animate-pulse"></span>
+                <span class="text-xs sm:text-sm font-black tracking-widest text-zinc-200 uppercase">
+                    SELECCIÓN MEXICANA <span class="text-gold-400">•</span> SUB-11 <span class="text-gold-400">•</span> VERACRUZ
                 </span>
             </div>
 
@@ -194,98 +167,97 @@
             <div class="space-y-2">
                 <h1 class="text-4xl sm:text-7xl lg:text-8xl font-display font-black tracking-tight text-white leading-none uppercase">
                     ELEVA TU <br>
-                    <span class="text-gradient-champagne drop-shadow-[0_10px_25px_rgba(251,191,36,0.3)]">IMPACTO</span>
-                    <span class="text-gradient-gold drop-shadow-[0_10px_25px_rgba(245,158,11,0.4)] block sm:inline"> DEPORTIVO</span>
+                    <span class="text-gradient-gold drop-shadow-[0_10px_25px_rgba(234,179,8,0.3)]">IMPACTO</span>
+                    <span class="text-white drop-shadow-[0_10px_20px_rgba(255,255,255,0.2)] block sm:inline"> DEPORTIVO</span>
                 </h1>
-                <p class="text-lg sm:text-2xl font-bold text-slate-300 tracking-wide uppercase pt-2">
-                    Gustavo Khiram Ortiz Palacios (&quot;Gus&quot;) &bull; Campeón Sub-11
+                <p class="text-lg sm:text-2xl font-bold text-gold-400 tracking-wide uppercase pt-2">
+                    Gustavo Khiram Ortiz Palacios &bull; Campeón Sub-11
                 </p>
             </div>
 
-            <!-- Subtitle Paragraph -->
-            <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto font-normal leading-relaxed">
-                Orgullo de Coatepec, Veracruz y Seleccionado Nacional de México. Entrenando al máximo nivel en el <strong class="text-amber-400">Velódromo de Xalapa</strong> junto a su entrenador <strong class="text-amber-300">Levi Báez Mora</strong>.
+            <p class="text-zinc-300 text-base sm:text-lg max-w-2xl mx-auto font-normal leading-relaxed">
+                Orgullo de Coatepec y Veracruz. Entrenando activamente en el <strong class="text-white">Velódromo de Xalapa</strong> bajo la supervisión de su entrenador <strong class="text-gold-400">Levi Báez Mora</strong>.
             </p>
 
             <!-- CTA Primary Buttons -->
-            <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-5">
-                <a href="#reciente" class="btn-action-primary w-full sm:w-auto px-10 py-5 rounded-full font-black text-sm uppercase tracking-wider flex items-center justify-center gap-3">
-                    <i class="fa-solid fa-trophy text-lg"></i>
+            <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#reciente" class="btn-gold w-full sm:w-auto px-8 py-4 rounded-full font-black text-sm uppercase tracking-wider flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-trophy"></i>
                     <span>Ver Medallas Recientes</span>
                 </a>
-                <a href="#entrenador" class="btn-action-gold-outline w-full sm:w-auto px-8 py-5 rounded-full font-black text-sm uppercase tracking-wider flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-medal text-amber-400"></i>
-                    <span>Conoce a su Entrenador</span>
+                <a href="#apoyo" class="btn-gold-outline w-full sm:w-auto px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wider flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+                    <span>Apoyar / Contribuir</span>
                 </a>
             </div>
 
             <!-- Quick Stats Counters -->
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-10 max-w-4xl mx-auto">
-                <div class="glass-card p-4 sm:p-5 rounded-2xl text-center border-t-2 border-amber-400">
-                    <span class="block font-display text-2xl sm:text-3xl lg:text-4xl font-black text-amber-400 truncate">Sub-11</span>
-                    <span class="text-[11px] text-slate-400 font-bold uppercase tracking-wider">Categoría Élite</span>
+                <div class="glass-card p-5 rounded-2xl text-center border-t-2 border-gold-400">
+                    <span class="block font-display text-2xl sm:text-3xl lg:text-4xl font-black text-gold-400 truncate">Sub-11</span>
+                    <span class="text-[11px] text-zinc-400 font-bold uppercase tracking-wider">Categoría Élite</span>
                 </div>
-                <div class="glass-card p-4 sm:p-5 rounded-2xl text-center border-t-2 border-amber-300">
-                    <span class="block font-display text-2xl sm:text-3xl lg:text-4xl font-black text-amber-300 truncate">2x Bronces</span>
-                    <span class="text-[11px] text-slate-400 font-bold uppercase tracking-wider">Centroamericano</span>
+                <div class="glass-card p-5 rounded-2xl text-center border-t-2 border-gold-500">
+                    <span class="block font-display text-2xl sm:text-3xl lg:text-4xl font-black text-white truncate">2x Bronces</span>
+                    <span class="text-[11px] text-zinc-400 font-bold uppercase tracking-wider">Centroamericano</span>
                 </div>
-                <div class="glass-card p-4 sm:p-5 rounded-2xl text-center border-t-2 border-amber-500">
-                    <span class="block font-display text-2xl sm:text-3xl lg:text-4xl font-black text-amber-400 truncate">Medallas</span>
-                    <span class="text-[11px] text-slate-400 font-bold uppercase tracking-wider">Torneo Reciente</span>
+                <div class="glass-card p-5 rounded-2xl text-center border-t-2 border-gold-400">
+                    <span class="block font-display text-2xl sm:text-3xl lg:text-4xl font-black text-gold-400 truncate">Medallas</span>
+                    <span class="text-[11px] text-zinc-400 font-bold uppercase tracking-wider">Torneo Reciente</span>
                 </div>
-                <div class="glass-card p-4 sm:p-5 rounded-2xl text-center border-t-2 border-amber-400">
-                    <span class="block font-display text-2xl sm:text-3xl lg:text-4xl font-black text-amber-300 truncate">Xalapa</span>
-                    <span class="text-[11px] text-slate-400 font-bold uppercase tracking-wider">Sede Velódromo</span>
+                <div class="glass-card p-5 rounded-2xl text-center border-t-2 border-zinc-400">
+                    <span class="block font-display text-2xl sm:text-3xl lg:text-4xl font-black text-zinc-200 truncate">Xalapa</span>
+                    <span class="text-[11px] text-zinc-400 font-bold uppercase tracking-wider">Sede Velódromo</span>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <!-- SECCIÓN DE TRIUNFO RECIENTE -->
-    <section id="reciente" class="py-20 relative bg-mexblack-950 border-t border-amber-500/20">
+    <!-- TRIUNFO RECIENTE -->
+    <section id="reciente" class="py-20 relative bg-zinc-950 border-t border-zinc-800/80">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="glass-card-gold rounded-3xl p-8 sm:p-12 border border-amber-500/40 relative overflow-hidden">
-                <div class="absolute -top-24 -right-24 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="glass-card rounded-3xl p-8 sm:p-12 border border-gold-500/30 relative overflow-hidden">
+                <div class="absolute -top-24 -right-24 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
                     
                     <div class="lg:col-span-7 space-y-6">
-                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/40 text-xs font-black uppercase tracking-widest">
-                            <i class="fa-solid fa-fire text-amber-400 animate-bounce"></i> ¡ÚLTIMO LOGRO DEPORTIVO!
+                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold-500/10 text-gold-400 border border-gold-500/30 text-xs font-black uppercase tracking-widest">
+                            <i class="fa-solid fa-star text-gold-400"></i> LOGRO RECIENTE DE GUS
                         </div>
 
                         <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-white leading-tight">
                             Triunfo Reciente & <br>
-                            <span class="text-gradient-gold">Nuevas Medallas de Honor</span>
+                            <span class="text-gradient-gold">Nuevas Medallas Obtenidas</span>
                         </h2>
 
-                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-                            Hace tan solo unas semanas, <strong class="text-amber-400">Gus</strong> representó nuevamente a Veracruz en un evento deportivo de alta exigencia, consolidando su excelente racha competitiva al conquistar nuevas medallas para su palmarés en la categoría Sub-11.
+                        <p class="text-zinc-300 text-sm sm:text-base leading-relaxed">
+                            Hace apenas un par de semanas, Gus volvió a poner en alto el nombre de Veracruz al conseguir destacadas medallas en su torneo más reciente, ratificando su crecimiento dentro del tenis de mesa infantil mexicano.
                         </p>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                            <div class="bg-mexblack-900/90 p-4 rounded-2xl border border-amber-500/30">
-                                <i class="fa-solid fa-award text-amber-400 text-2xl mb-2"></i>
-                                <h4 class="font-bold text-white text-sm">Podio de Excelencia</h4>
-                                <p class="text-xs text-slate-400 mt-1">Demostrando dominio táctico y potencia en cada set.</p>
+                            <div class="bg-zinc-900/90 p-4 rounded-2xl border border-zinc-800">
+                                <i class="fa-solid fa-award text-gold-400 text-2xl mb-2"></i>
+                                <h4 class="font-bold text-white text-sm">Podio Confirmado</h4>
+                                <p class="text-xs text-zinc-400 mt-1">Consistencia en sets decisivos y potencia en el ataque.</p>
                             </div>
-                            <div class="bg-mexblack-900/90 p-4 rounded-2xl border border-amber-500/30">
-                                <i class="fa-solid fa-chart-line text-amber-300 text-2xl mb-2"></i>
-                                <h4 class="font-bold text-white text-sm">Ritmo Imparable</h4>
-                                <p class="text-xs text-slate-400 mt-1">Fruto del entrenamiento intensivo en el Velódromo de Xalapa.</p>
+                            <div class="bg-zinc-900/90 p-4 rounded-2xl border border-zinc-800">
+                                <i class="fa-solid fa-bolt text-gold-400 text-2xl mb-2"></i>
+                                <h4 class="font-bold text-white text-sm">Preparación Continua</h4>
+                                <p class="text-xs text-zinc-400 mt-1">Resultado directo de las sesiones diarias en el Velódromo de Xalapa.</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Photo of Recent Tournament -->
+                    <!-- Photo Container -->
                     <div class="lg:col-span-5">
-                        <div class="relative rounded-2xl overflow-hidden border-2 border-amber-500/60 shadow-2xl group">
-                            <img src="triunfo-reciente.jpg" alt="[Gus Ortiz con Medallas Recientes]" class="w-full h-80 object-cover object-center group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511067007398-7e4b90cfa4bc?q=80&w=800&auto=format&fit=crop';">
-                            <div class="absolute inset-0 bg-gradient-to-t from-mexblack-950 via-transparent to-transparent"></div>
-                            <div class="absolute bottom-4 left-4 right-4 p-3 bg-mexblack-950/90 backdrop-blur-md rounded-xl border border-amber-500/40">
-                                <span class="text-xs text-amber-400 font-bold block"><i class="fa-solid fa-medal mr-1"></i> Fotografía del Evento</span>
-                                <span class="text-[11px] text-slate-300">Gus mostrando sus medallas conquistadas recientemente.</span>
+                        <div class="relative rounded-2xl overflow-hidden border border-gold-500/40 shadow-2xl group">
+                            <img src="triunfo-reciente.jpg" alt="[Gus con sus Medallas Recientes]" class="w-full h-80 object-cover object-center group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511067007398-7e4b90cfa4bc?q=80&w=800&auto=format&fit=crop';">
+                            <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 right-4 p-3 bg-zinc-950/90 backdrop-blur-md rounded-xl border border-zinc-800">
+                                <span class="text-xs text-gold-400 font-bold block"><i class="fa-solid fa-camera mr-1"></i> Fotografía del Evento</span>
+                                <span class="text-[11px] text-zinc-300">Gus exhibiendo las medallas conquistadas recientemente.</span>
                             </div>
                         </div>
                     </div>
@@ -295,16 +267,14 @@
         </div>
     </section>
 
-    <!-- AGRADECIMIENTO EMOTIVO A SU ENTRENADOR LEVI BÁEZ MORA -->
-    <section id="entrenador" class="py-24 relative bg-mexblack-900/80 border-t border-amber-500/20">
+    <!-- SECCIÓN DE AGRADECIMIENTO AL ENTRENADOR LEVI BÁEZ MORA -->
+    <section id="entrenador" class="py-24 relative bg-zinc-900/70 border-t border-zinc-800/80">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-                <span class="text-amber-400 font-black text-xs uppercase tracking-widest block">Mentoría y Dirección Técnica</span>
-                <h2 class="text-3xl sm:text-5xl font-display font-black text-white">
-                    Reconocimiento a la Excelencia
-                </h2>
-                <div class="w-24 h-1.5 bg-gradient-to-r from-amber-600 via-amber-400 to-yellow-200 mx-auto rounded-full"></div>
+                <span class="text-gold-400 font-black text-xs uppercase tracking-widest block">Mentoría y Dirección Técnica</span>
+                <h2 class="text-3xl sm:text-5xl font-display font-black text-white">Reconocimiento a la Excelencia</h2>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-gold-400 to-amber-600 mx-auto rounded-full"></div>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -312,53 +282,52 @@
                 <!-- Coach Photo -->
                 <div class="lg:col-span-5 flex justify-center">
                     <div class="relative w-full max-w-md">
-                        <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-amber-500 to-yellow-300 opacity-30 blur-xl"></div>
-                        <div class="relative glass-card p-4 rounded-3xl border border-amber-500/40">
+                        <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-gold-400 to-amber-700 opacity-30 blur-xl"></div>
+                        <div class="relative glass-card p-4 rounded-3xl border border-gold-500/30">
                             <div class="h-96 rounded-2xl overflow-hidden relative">
-                                <img src="levi-baez-entrenador.jpg" alt="[Entrenador Levi Báez Mora y Gus Ortiz]" class="w-full h-full object-cover object-center" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1526232761682-d26e03ac148e?q=80&w=800&auto=format&fit=crop';">
-                                <div class="absolute inset-0 bg-gradient-to-t from-mexblack-950 via-mexblack-950/20 to-transparent"></div>
+                                <img src="levi-baez-entrenador.jpg" alt="[Entrenador Levi Báez Mora]" class="w-full h-full object-cover object-center" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1526232761682-d26e03ac148e?q=80&w=800&auto=format&fit=crop';">
+                                <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-transparent"></div>
                                 <div class="absolute bottom-4 left-4 right-4">
                                     <h3 class="text-2xl font-display font-black text-white">LEVI BÁEZ MORA</h3>
-                                    <p class="text-xs text-amber-400 font-bold uppercase tracking-wider">Entrenador Estatal de Tenis de Mesa</p>
+                                    <p class="text-xs text-gold-400 font-bold uppercase tracking-wider">Entrenador Estatal de Tenis de Mesa</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Emotional Gratitude Letter for Gus -->
+                <!-- Emotional Letter -->
                 <div class="lg:col-span-7 space-y-6">
-                    <div class="glass-card p-8 sm:p-10 rounded-3xl border border-amber-500/30 space-y-6 relative">
-                        <i class="fa-solid fa-quote-left text-5xl text-amber-500/20 absolute top-6 right-6"></i>
+                    <div class="glass-card p-8 sm:p-10 rounded-3xl border border-gold-500/20 space-y-6 relative">
+                        <i class="fa-solid fa-quote-left text-5xl text-gold-400/10 absolute top-6 right-6"></i>
 
                         <h3 class="text-2xl font-display font-bold text-white flex items-center gap-3">
-                            <i class="fa-solid fa-handshake text-amber-400"></i>
+                            <i class="fa-solid fa-handshake text-gold-400"></i>
                             Gracias por Guiar Cada Paso de Gus, Profe Levi
                         </h3>
 
-                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed italic">
-                            &quot;Detrás de cada medalla, de cada saque perfecto y de cada punto disputado con garra por <strong class="text-white">Gus</strong> en la mesa, está la sabiduría, paciencia y estrategia del <strong class="text-amber-400">Entrenador Levi Báez Mora</strong>.&quot;
+                        <p class="text-zinc-300 text-sm sm:text-base leading-relaxed italic">
+                            "Detrás de cada medalla, de cada saque perfecto y de cada punto disputado con garra por <strong class="text-gold-400">Gus</strong> en la mesa, está la sabiduría, paciencia y estrategia del <strong class="text-white">Entrenador Levi Báez Mora</strong>."
                         </p>
 
-                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-                            Actualmente, bajo la supervisión directa del profesor Levi en el <strong class="text-amber-400">Velódromo de Xalapa</strong>, <strong class="text-white">Gus</strong> ha alcanzado un nivel de madurez técnica y fortaleza mental extraordinario. Su compromiso diario no solo forma a un campeón de tenis de mesa, sino a un gran joven con valores firmes.
+                        <p class="text-zinc-300 text-sm sm:text-base leading-relaxed">
+                            Actualmente, bajo la supervisión directa del profesor Levi en el <strong class="text-gold-400">Velódromo de Xalapa</strong>, <strong class="text-white">Gus</strong> ha alcanzado un nivel de madurez técnica y fortaleza mental extraordinario. Su compromiso diario no solo forma a un campeón de tenis de mesa, sino a un gran joven con valores firmes.
                         </p>
 
-                        <!-- Highlights Box -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                            <div class="bg-mexblack-950/90 p-4 rounded-xl border border-amber-500/20">
-                                <span class="text-xs text-amber-400 font-bold block mb-1"><i class="fa-solid fa-chess text-amber-400 mr-1"></i> Estrategia de Juego</span>
-                                <span class="text-xs text-slate-300">Análisis técnico de rivales e intensificación del topspin de Gus.</span>
+                            <div class="bg-zinc-950/80 p-4 rounded-xl border border-zinc-800">
+                                <span class="text-xs text-gold-400 font-bold block mb-1"><i class="fa-solid fa-chess text-gold-400 mr-1"></i> Estrategia de Juego</span>
+                                <span class="text-xs text-zinc-300">Análisis técnico de rivales e intensificación del topspin de Gus.</span>
                             </div>
-                            <div class="bg-mexblack-950/90 p-4 rounded-xl border border-amber-500/20">
-                                <span class="text-xs text-amber-300 font-bold block mb-1"><i class="fa-solid fa-heart-pulse text-amber-300 mr-1"></i> Disciplina Diaria</span>
-                                <span class="text-xs text-slate-300">Entrenamiento continuo en el alto rendimiento veracruzano.</span>
+                            <div class="bg-zinc-950/80 p-4 rounded-xl border border-zinc-800">
+                                <span class="text-xs text-gold-400 font-bold block mb-1"><i class="fa-solid fa-heart-pulse text-gold-400 mr-1"></i> Disciplina Diaria</span>
+                                <span class="text-xs text-zinc-300">Entrenamiento continuo en el alto rendimiento veracruzano.</span>
                             </div>
                         </div>
 
-                        <div class="pt-4 border-t border-amber-500/20 flex items-center justify-between text-xs text-slate-400">
+                        <div class="pt-4 border-t border-zinc-800 flex flex-wrap items-center justify-between gap-2 text-xs text-zinc-400">
                             <span>Sede actual: Velódromo de Xalapa</span>
-                            <span class="text-amber-400 font-bold">¡Eternamente Agradecidos con el Profe Levi!</span>
+                            <span class="text-gold-400 font-bold">¡Eternamente Agradecidos con el Profe Levi!</span>
                         </div>
                     </div>
                 </div>
@@ -367,117 +336,90 @@
         </div>
     </section>
 
-    <!-- TRAYECTORIA COMPLETA DE GUS (LÍNEA DEL TIEMPO RESTRUCTURADA Y DETALLADA) -->
-    <section id="trayectoria" class="py-24 bg-mexblack-950 border-t border-amber-500/20 relative">
+    <!-- TRAYECTORIA COMPLETA DE GUS -->
+    <section id="trayectoria" class="py-24 relative bg-zinc-950 border-t border-zinc-800/80">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            
             <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-                <span class="text-amber-400 font-black text-xs uppercase tracking-widest block">Cronología de Éxitos</span>
-                <h2 class="text-3xl sm:text-5xl font-display font-black text-white">
-                    Trayectoria Deportiva de Gus
-                </h2>
-                <p class="text-slate-400 text-sm sm:text-base">El camino recorrido por Gustavo Khiram Ortiz Palacios desde sus inicios hasta el podio internacional.</p>
-                <div class="w-24 h-1.5 bg-gradient-to-r from-amber-600 via-amber-400 to-yellow-200 mx-auto rounded-full"></div>
+                <span class="text-gold-400 font-bold text-xs uppercase tracking-widest block">Línea del Tiempo</span>
+                <h2 class="text-3xl sm:text-5xl font-display font-black text-white">Trayectoria Deportiva de Gus</h2>
+                <p class="text-zinc-400 text-sm">El camino de disciplina y constancia desde Coatepec hasta la Selección Nacional.</p>
+                <div class="w-20 h-1.5 bg-gradient-to-r from-gold-400 to-amber-600 mx-auto rounded-full"></div>
             </div>
 
-            <!-- Vertical Timeline -->
-            <div class="relative border-l-2 border-amber-500/30 ml-4 sm:ml-32 space-y-10">
+            <!-- Timeline -->
+            <div class="relative border-l-2 border-gold-500/30 ml-4 sm:ml-32 space-y-12">
 
-                <!-- Timeline Item 1: Inicios Coatepec -->
+                <!-- Timeline Item 1 -->
                 <div class="relative pl-8 sm:pl-12 group">
-                    <div class="hidden sm:block absolute -left-32 top-1 text-right w-24 text-xs font-black text-amber-400 uppercase tracking-widest">
+                    <div class="hidden sm:block absolute -left-32 top-0 text-right w-24 text-xs font-bold text-gold-400 uppercase tracking-widest pt-1">
                         Inicios
                     </div>
-                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-amber-400 border-4 border-mexblack-950 group-hover:scale-125 transition-transform shadow-lg shadow-amber-500/50"></div>
-                    
-                    <div class="glass-card p-6 rounded-2xl border border-amber-500/30 space-y-2">
-                        <span class="sm:hidden inline-block text-xs font-black text-amber-400 uppercase tracking-widest">Inicios en Coatepec</span>
-                        <h3 class="text-xl font-display font-bold text-white flex items-center gap-2">
-                            <i class="fa-solid fa-ping-pong-paddle-ball text-amber-400"></i>
-                            Primeros Pasos en el Club Coatepong
-                        </h3>
-                        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
-                            Gustavo Khiram Ortiz Palacios (&quot;Gus&quot;) comenzó su formación técnica en Coatepec, Veracruz, integrándose al club <strong class="text-white">Coatepong</strong>. Desde muy temprana edad destacó por sus reflejos felinos, coordinación y pasión por el tenis de mesa.
+                    <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-gold-400 border-4 border-zinc-950 group-hover:scale-125 transition-transform"></div>
+                    <div class="glass-card p-6 rounded-2xl border border-zinc-800">
+                        <span class="sm:hidden inline-block text-xs font-bold text-gold-400 uppercase tracking-widest mb-2">Inicios</span>
+                        <h3 class="text-xl font-display font-bold text-white mb-2">Primeros Pasos en Club Coatepong</h3>
+                        <p class="text-zinc-300 text-sm leading-relaxed">
+                            Gus inició su formación deportiva básica en Coatepec, Veracruz. Desde sus primeros entrenamientos demostró una coordinación natural y pasión por la raqueta.
                         </p>
                     </div>
                 </div>
 
-                <!-- Timeline Item 2: Campeonato Estatal e IVD -->
+                <!-- Timeline Item 2 -->
                 <div class="relative pl-8 sm:pl-12 group">
-                    <div class="hidden sm:block absolute -left-32 top-1 text-right w-24 text-xs font-black text-amber-300 uppercase tracking-widest">
+                    <div class="hidden sm:block absolute -left-32 top-0 text-right w-24 text-xs font-bold text-gold-400 uppercase tracking-widest pt-1">
                         Estatal
                     </div>
-                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-amber-500 border-4 border-mexblack-950 group-hover:scale-125 transition-transform"></div>
-
-                    <div class="glass-card p-6 rounded-2xl border border-amber-500/30 space-y-2">
-                        <span class="sm:hidden inline-block text-xs font-black text-amber-300 uppercase tracking-widest">Campeonato Estatal</span>
-                        <h3 class="text-xl font-display font-bold text-white flex items-center gap-2">
-                            <i class="fa-solid fa-crown text-amber-300"></i>
-                            Dominio en Veracruz & Selección Estatal
-                        </h3>
-                        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
-                            Consolida su reinado regional al convertirse en Campeón Estatal Sub-11 de Veracruz. Su desempeño le asegura un lugar prioritario en la delegación veracruzana coordinada por el Instituto Veracruzano del Deporte (IVD).
+                    <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-gold-400 border-4 border-zinc-950 group-hover:scale-125 transition-transform"></div>
+                    <div class="glass-card p-6 rounded-2xl border border-zinc-800">
+                        <span class="sm:hidden inline-block text-xs font-bold text-gold-400 uppercase tracking-widest mb-2">Estatal</span>
+                        <h3 class="text-xl font-display font-bold text-white mb-2">Campeón Estatal e Integración a Selección Veracruz</h3>
+                        <p class="text-zinc-300 text-sm leading-relaxed">
+                            Dominó los selectivos en Veracruz, ganando su lugar en la delegación estatal del Instituto Veracruzano del Deporte (IVD) para los Macro Regionales y Juegos Nacionales CONADE.
                         </p>
                     </div>
                 </div>
 
-                <!-- Timeline Item 3: Convocatoria Selección Mexicana -->
+                <!-- Timeline Item 3 -->
                 <div class="relative pl-8 sm:pl-12 group">
-                    <div class="hidden sm:block absolute -left-32 top-1 text-right w-24 text-xs font-black text-amber-400 uppercase tracking-widest">
+                    <div class="hidden sm:block absolute -left-32 top-0 text-right w-24 text-xs font-bold text-gold-400 uppercase tracking-widest pt-1">
                         Nacional
                     </div>
-                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-yellow-400 border-4 border-mexblack-950 group-hover:scale-125 transition-transform"></div>
-
-                    <div class="glass-card p-6 rounded-2xl border border-amber-500/30 space-y-2">
-                        <span class="sm:hidden inline-block text-xs font-black text-amber-400 uppercase tracking-widest">Selección Nacional</span>
-                        <h3 class="text-xl font-display font-bold text-white flex items-center gap-2">
-                            <i class="fa-solid fa-flag text-amber-400"></i>
-                            Llamado a la Selección Mexicana U11
-                        </h3>
-                        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
-                            Gracias a su destacado ranking en los selectivos y torneos avalados por la Federación Mexicana de Tenis de Mesa (FMTTM), Gus logra ser convocado oficialmente a la Selección Nacional de México Sub-11.
+                    <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-gold-400 border-4 border-zinc-950 group-hover:scale-125 transition-transform"></div>
+                    <div class="glass-card p-6 rounded-2xl border border-zinc-800">
+                        <span class="sm:hidden inline-block text-xs font-bold text-gold-400 uppercase tracking-widest mb-2">Nacional</span>
+                        <h3 class="text-xl font-display font-bold text-white mb-2">Convocatoria a la Selección Mexicana Sub-11</h3>
+                        <p class="text-zinc-300 text-sm leading-relaxed">
+                            Gracias a sus resultados en los campeonatos nacionales de la FMTTM, es convocado oficialmente por la Federación para representar a México internacionalmente.
                         </p>
                     </div>
                 </div>
 
-                <!-- Timeline Item 4: Doble Bronce Centroamericano en Belice -->
+                <!-- Timeline Item 4 -->
                 <div class="relative pl-8 sm:pl-12 group">
-                    <div class="hidden sm:block absolute -left-32 top-1 text-right w-24 text-xs font-black text-amber-400 uppercase tracking-widest">
-                        Belice
+                    <div class="hidden sm:block absolute -left-32 top-0 text-right w-24 text-xs font-bold text-gold-400 uppercase tracking-widest pt-1">
+                        Internacional
                     </div>
-                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-amber-300 border-4 border-mexblack-950 group-hover:scale-125 transition-transform"></div>
-
-                    <div class="glass-card-gold p-6 rounded-2xl border border-amber-500/50 space-y-2">
-                        <span class="sm:hidden inline-block text-xs font-black text-amber-300 uppercase tracking-widest">Consagración Internacional</span>
-                        <h3 class="text-xl font-display font-bold text-white flex items-center gap-2">
-                            <i class="fa-solid fa-earth-americas text-amber-400"></i>
-                            2x Medallas de Bronce en el Centroamericano U11
-                        </h3>
-                        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
-                            En el Campeonato Centroamericano Sub-11 y Sub-13 celebrado en Belice, Gus brilla internacionalmente:
+                    <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-gold-400 border-4 border-zinc-950 group-hover:scale-125 transition-transform"></div>
+                    <div class="glass-card p-6 rounded-2xl border border-gold-500/40">
+                        <span class="sm:hidden inline-block text-xs font-bold text-gold-400 uppercase tracking-widest mb-2">Internacional</span>
+                        <h3 class="text-xl font-display font-bold text-white mb-2">Doble Bronce en Centroamericano de Belice</h3>
+                        <p class="text-zinc-300 text-sm leading-relaxed">
+                            Obtuvo dos medallas de bronce internacionales: en Dobles Varonil U11 (junto a Gael Pardo) y por Equipos U11 con la escuadra de México A frente a rivales de la región centroamericana.
                         </p>
-                        <ul class="list-disc list-inside text-xs text-amber-300 font-semibold space-y-1 pt-1">
-                            <li><strong>Medalla de Bronce Por Equipos U11:</strong> Con el equipo México A, alcanzando las semifinales frente a Costa Rica A.</li>
-                            <li><strong>Medalla de Bronce Dobles Varonil U11:</strong> Haciendo una brillante dupla junto al xalapeño <em>Gael Pardo Lagunes</em>.</li>
-                        </ul>
                     </div>
                 </div>
 
-                <!-- Timeline Item 5: Etapa Velódromo de Xalapa y Profe Levi Báez -->
+                <!-- Timeline Item 5 -->
                 <div class="relative pl-8 sm:pl-12 group">
-                    <div class="hidden sm:block absolute -left-32 top-1 text-right w-24 text-xs font-black text-amber-400 uppercase tracking-widest">
-                        Actualidad
+                    <div class="hidden sm:block absolute -left-32 top-0 text-right w-24 text-xs font-bold text-gold-400 uppercase tracking-widest pt-1">
+                        Presente
                     </div>
-                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-amber-400 border-4 border-mexblack-950 group-hover:scale-125 transition-transform animate-pulse"></div>
-
-                    <div class="glass-card p-6 rounded-2xl border border-amber-500/40 space-y-2">
-                        <span class="sm:hidden inline-block text-xs font-black text-amber-400 uppercase tracking-widest">Alto Rendimiento</span>
-                        <h3 class="text-xl font-display font-bold text-white flex items-center gap-2">
-                            <i class="fa-solid fa-bolt text-amber-400"></i>
-                            Sede Velódromo de Xalapa & Entrenador Levi Báez Mora
-                        </h3>
-                        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
-                            Actualmente, Gus entrena intensivamente en el Velódromo de Xalapa bajo la tutela técnica del reconocido entrenador <strong class="text-amber-400">Levi Báez Mora</strong>. Una alianza estratégica que se traduce en nuevas medallas recientes y un crecimiento táctico constante.
+                    <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-gold-400 border-4 border-zinc-950 group-hover:scale-125 transition-transform"></div>
+                    <div class="glass-card p-6 rounded-2xl border border-gold-500/40">
+                        <span class="sm:hidden inline-block text-xs font-bold text-gold-400 uppercase tracking-widest mb-2">Presente</span>
+                        <h3 class="text-xl font-display font-bold text-white mb-2">Alto Rendimiento en Velódromo de Xalapa con Profe Levi</h3>
+                        <p class="text-zinc-300 text-sm leading-relaxed">
+                            Entrenamiento intensivo en el Velódromo de Xalapa a cargo del Entrenador Levi Báez Mora, sumando medallas recientes y preparando los próximos compromisos oficiales.
                         </p>
                     </div>
                 </div>
@@ -486,54 +428,53 @@
         </div>
     </section>
 
-    <!-- ENTRENAMIENTO EN EL VELÓDROMO DE XALAPA -->
-    <section id="entrenamiento" class="py-24 relative bg-mexblack-900/60 border-t border-amber-500/20">
+    <!-- ENTRENAMIENTO EN EL VELÓDROMO -->
+    <section id="velodromo" class="py-24 relative bg-zinc-900/60 border-t border-zinc-800/80">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
                 <div class="lg:col-span-6 space-y-6">
-                    <span class="text-amber-400 font-bold text-xs uppercase tracking-widest block">Centro de Alto Rendimiento</span>
+                    <span class="text-gold-400 font-bold text-xs uppercase tracking-widest block">Sede Oficial de Preparación</span>
                     <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-white">
-                        Entrenando en el <br>
-                        <span class="text-gradient-gold">Velódromo de Xalapa</span>
+                        Velódromo de Xalapa: <br>
+                        <span class="text-gradient-gold">Donde se Forja un Campeón</span>
                     </h2>
 
-                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-                        El emblemático Velódromo de Xalapa se ha convertido en la sede principal de entrenamiento para Gus y la selección estatal de tenis de mesa. Con instalaciones preparadas para el alto rendimiento, aquí es donde se forjan las victorias internacionales.
+                    <p class="text-zinc-300 text-sm sm:text-base leading-relaxed">
+                        El Velódromo de Xalapa alberga el espacio de alto rendimiento para el tenis de mesa veracruzano. En estas instalaciones, Gus afina su velocidad, control y consistencia bajo la mirada técnica del Profe Levi.
                     </p>
 
                     <div class="space-y-3 pt-2">
                         <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 mt-1">
+                            <div class="w-8 h-8 rounded-lg bg-gold-500/20 text-gold-400 flex items-center justify-center shrink-0 mt-1">
                                 <i class="fa-solid fa-check"></i>
                             </div>
                             <div>
-                                <h4 class="text-white font-bold text-sm">Sesiones Intensivas Diarias</h4>
-                                <p class="text-xs text-slate-400">Preparación física, trabajo con robótica de pelotas y desplazamiento multi-pelota.</p>
+                                <h4 class="text-white font-bold text-sm">Rutinas de Multibola y Reacción</h4>
+                                <p class="text-xs text-zinc-400">Simulación de ritmo internacional para respuesta rápida en la mesa.</p>
                             </div>
                         </div>
 
                         <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 rounded-lg bg-yellow-500/20 text-yellow-300 flex items-center justify-center shrink-0 mt-1">
+                            <div class="w-8 h-8 rounded-lg bg-gold-500/20 text-gold-400 flex items-center justify-center shrink-0 mt-1">
                                 <i class="fa-solid fa-check"></i>
                             </div>
                             <div>
-                                <h4 class="text-white font-bold text-sm">Fogueo con Seleccionados Veracruzanos</h4>
-                                <p class="text-xs text-slate-400">Prácticas constantes con atletas de la delegación estatal de Veracruz.</p>
+                                <h4 class="text-white font-bold text-sm">Fogueo con Seleccionados de Veracruz</h4>
+                                <p class="text-xs text-zinc-400">Prácticas continuas frente a atletas de categorías superiores.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Root Image Path for Velodromo -->
                 <div class="lg:col-span-6">
-                    <div class="rounded-3xl overflow-hidden border border-amber-500/30 shadow-2xl glass-card p-3">
+                    <div class="rounded-3xl overflow-hidden border border-zinc-800 shadow-2xl glass-card p-3">
                         <div class="h-96 rounded-2xl overflow-hidden relative">
-                            <img src="velodromo-xalapa.jpg" alt="[Velódromo de Xalapa Área de Tenis de Mesa]" class="w-full h-full object-cover object-center" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=800&auto=format&fit=crop';">
-                            <div class="absolute inset-0 bg-gradient-to-t from-mexblack-950 via-transparent to-transparent"></div>
-                            <div class="absolute bottom-4 left-4 right-4 p-4 bg-mexblack-950/90 backdrop-blur-md rounded-xl border border-amber-500/30">
-                                <span class="text-xs text-amber-400 font-bold block"><i class="fa-solid fa-location-dot mr-1"></i> Xalapa, Veracruz</span>
-                                <span class="text-xs text-slate-200">Sede Oficial de Preparación rumbo a torneos nacionales e internacionales.</span>
+                            <img src="velodromo-xalapa.jpg" alt="[Velódromo de Xalapa]" class="w-full h-full object-cover object-center" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=800&auto=format&fit=crop';">
+                            <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 right-4 p-4 bg-zinc-950/90 backdrop-blur-md rounded-xl border border-zinc-800">
+                                <span class="text-xs text-gold-400 font-bold block"><i class="fa-solid fa-location-dot mr-1"></i> Xalapa, Veracruz</span>
+                                <span class="text-xs text-zinc-200">Gus en su centro de entrenamiento diario.</span>
                             </div>
                         </div>
                     </div>
@@ -543,99 +484,180 @@
         </div>
     </section>
 
-    <!-- PALMARÉS & MEDALLERO COMPLETO -->
-    <section id="palmares" class="py-24 bg-mexblack-950 border-t border-amber-500/20">
+    <!-- MEDALLAS COMPLETO -->
+    <section id="medallas" class="py-24 bg-zinc-950 border-t border-zinc-800/80">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-                <span class="text-amber-400 font-bold text-xs uppercase tracking-widest block">Historial Deportivo</span>
+                <span class="text-gold-400 font-bold text-xs uppercase tracking-widest block">Resumen de Logros</span>
                 <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-white">Vitrina de Medallas</h2>
-                <div class="w-20 h-1.5 bg-gradient-to-r from-amber-500 to-yellow-300 mx-auto rounded-full"></div>
+                <div class="w-20 h-1.5 bg-gradient-to-r from-gold-400 to-amber-600 mx-auto rounded-full"></div>
             </div>
 
-            <!-- Cards Grid -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                
-                <!-- Card 1 -->
-                <div class="glass-card p-6 rounded-2xl border border-amber-500/40 hover:border-amber-400 transition-all">
-                    <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-2xl font-bold mb-4">
+                <div class="glass-card p-6 rounded-2xl border border-gold-500/30">
+                    <div class="w-12 h-12 rounded-xl bg-gold-500/20 text-gold-400 flex items-center justify-center text-2xl font-bold mb-4">
                         <i class="fa-solid fa-earth-americas"></i>
                     </div>
-                    <span class="text-xs text-amber-400 font-extrabold uppercase tracking-widest block">Internacional</span>
+                    <span class="text-xs text-gold-400 font-extrabold uppercase tracking-widest block">Internacional</span>
                     <h3 class="text-xl font-display font-bold text-white mt-1">2x Medallas de Bronce</h3>
-                    <p class="text-slate-300 text-xs mt-2 leading-relaxed">
-                        Campeonato Centroamericano Sub-11 en Belice: Dobles Varonil U11 (con Gael Pardo) y Equipos U11 (México A).
+                    <p class="text-zinc-300 text-xs mt-2 leading-relaxed">
+                        Campeonato Centroamericano Sub-11 en Belice (Dobles Varonil y Equipos México A).
                     </p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl border border-gold-500/30">
+                    <div class="w-12 h-12 rounded-xl bg-gold-500/20 text-gold-400 flex items-center justify-center text-2xl font-bold mb-4">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+                    <span class="text-xs text-gold-400 font-extrabold uppercase tracking-widest block">Nacional</span>
+                    <h3 class="text-xl font-display font-bold text-white mt-1">Juegos CONADE & FMTTM</h3>
+                    <p class="text-zinc-300 text-xs mt-2 leading-relaxed">
+                        Medallista y seleccionado destacado de la delegación de Veracruz.
+                    </p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl border border-gold-500/30">
+                    <div class="w-12 h-12 rounded-xl bg-gold-500/20 text-gold-400 flex items-center justify-center text-2xl font-bold mb-4">
+                        <i class="fa-solid fa-crown"></i>
+                    </div>
+                    <span class="text-xs text-gold-400 font-extrabold uppercase tracking-widest block">Estatal</span>
+                    <h3 class="text-xl font-display font-bold text-white mt-1">Campeón Veracruz U11</h3>
+                    <p class="text-zinc-300 text-xs mt-2 leading-relaxed">
+                        Múltiples campeonatos en selectivos estatales representando a Coatepec y Veracruz.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE APOYO, PATROCINIOS Y CONTRIBUCIONES -->
+    <section id="apoyo" class="py-24 bg-zinc-900/80 relative border-t border-zinc-800/80">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-gold-400 font-black text-xs uppercase tracking-widest block">Impulsa su Desarrollo</span>
+                <h2 class="text-3xl sm:text-5xl font-display font-black text-white">
+                    Patrocinios y Apoyo al Atleta
+                </h2>
+                <p class="text-zinc-300 text-sm sm:text-base leading-relaxed">
+                    El tenis de mesa de alto rendimiento involucra costos constantes de viajes, hospedaje, inscripciones a torneos WTT/FMTTM y gomas/maderas especializadas. ¡Sé parte del equipo que apoya el sueño de Gus!
+                </p>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-gold-400 to-amber-600 mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Contribution Ways Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                
+                <!-- Card 1 -->
+                <div class="glass-card p-8 rounded-3xl border border-gold-500/30 flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="w-14 h-14 rounded-2xl bg-gold-500/20 text-gold-400 flex items-center justify-center text-2xl">
+                            <i class="fa-solid fa-plane-departure"></i>
+                        </div>
+                        <h3 class="text-xl font-display font-bold text-white">Giras y Viáticos</h3>
+                        <p class="text-xs text-zinc-300 leading-relaxed">
+                            Apoyo directo para traslados, vuelos y hospedaje en torneos nacionales e internacionales de la Selección Sub-11.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-zinc-800">
+                        <span class="text-[11px] text-gold-400 font-bold block">Destino: Competencias Oficiales</span>
+                    </div>
                 </div>
 
                 <!-- Card 2 -->
-                <div class="glass-card p-6 rounded-2xl border border-amber-500/40 hover:border-amber-400 transition-all">
-                    <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-300 flex items-center justify-center text-2xl font-bold mb-4">
-                        <i class="fa-solid fa-trophy"></i>
+                <div class="glass-card p-8 rounded-3xl border border-gold-500/30 flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="w-14 h-14 rounded-2xl bg-gold-500/20 text-gold-400 flex items-center justify-center text-2xl">
+                            <i class="fa-solid fa-table-tennis-paddle-ball"></i>
+                        </div>
+                        <h3 class="text-xl font-display font-bold text-white">Equipamiento Técnico</h3>
+                        <p class="text-xs text-zinc-300 leading-relaxed">
+                            Gomas profesionales de alto agarre, maderas de competición y calzado especializado para piso sintético.
+                        </p>
                     </div>
-                    <span class="text-xs text-amber-300 font-extrabold uppercase tracking-widest block">Nacional</span>
-                    <h3 class="text-xl font-display font-bold text-white mt-1">Juegos CONADE & México Open</h3>
-                    <p class="text-slate-300 text-xs mt-2 leading-relaxed">
-                        Medallista y clasificado oficial de la Selección Veracruzana en competencias nacionales de la FMTTM.
-                    </p>
+                    <div class="pt-4 border-t border-zinc-800">
+                        <span class="text-[11px] text-gold-400 font-bold block">Material: Grado Profesional</span>
+                    </div>
                 </div>
 
                 <!-- Card 3 -->
-                <div class="glass-card p-6 rounded-2xl border border-amber-500/40 hover:border-amber-400 transition-all">
-                    <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-2xl font-bold mb-4">
-                        <i class="fa-solid fa-crown"></i>
+                <div class="glass-card p-8 rounded-3xl border border-gold-500/30 flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="w-14 h-14 rounded-2xl bg-gold-500/20 text-gold-400 flex items-center justify-center text-2xl">
+                            <i class="fa-solid fa-handshake-simple"></i>
+                        </div>
+                        <h3 class="text-xl font-display font-bold text-white">Patrocinio de Marca</h3>
+                        <p class="text-xs text-zinc-300 leading-relaxed">
+                            Visibilidad de marca e imagen corporativa en el uniforme de entrenamiento de Gus y menciones oficiales.
+                        </p>
                     </div>
-                    <span class="text-xs text-amber-400 font-extrabold uppercase tracking-widest block">Estatal</span>
-                    <h3 class="text-xl font-display font-bold text-white mt-1">Campeón Veracruz Sub-11</h3>
-                    <p class="text-slate-300 text-xs mt-2 leading-relaxed">
-                        Inicios en Coatepec (Club Coatepong) y dominio invicto en los selectivos del estado de Veracruz.
-                    </p>
+                    <div class="pt-4 border-t border-zinc-800">
+                        <span class="text-[11px] text-gold-400 font-bold block">Beneficio: Imagen y Presencia</span>
+                    </div>
                 </div>
 
+            </div>
+
+            <!-- Direct Contact Box -->
+            <div class="glass-card p-8 rounded-3xl border border-gold-500/40 max-w-3xl mx-auto text-center space-y-6">
+                <h3 class="text-2xl font-display font-bold text-white">¿Te gustaría colaborar o ser patrocinador?</h3>
+                <p class="text-xs sm:text-sm text-zinc-300">
+                    Puedes ponerte en contacto directo con el equipo técnico y familiar de Gus para coordinar apoyos o patrocinios.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+                    <button onclick="copyContactInfo()" class="btn-gold w-full sm:w-auto px-8 py-3.5 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-copy"></i>
+                        <span>Copiar Datos de Contacto</span>
+                    </button>
+                    <a href="#mensajes" class="btn-gold-outline w-full sm:w-auto px-8 py-3.5 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-comment-dots"></i>
+                        <span>Enviar Mensaje</span>
+                    </a>
+                </div>
+                <span id="copyToast" class="block text-xs text-gold-400 font-bold hidden">¡Información copiada al portapapeles!</span>
             </div>
         </div>
     </section>
 
-    <!-- MURO DE MENSAJES DE AFICIÓN Y APOYO -->
-    <section id="aficion" class="py-24 bg-mexblack-900/80 border-t border-amber-500/20">
+    <!-- MENSAJES DE AFICIÓN -->
+    <section id="mensajes" class="py-24 bg-zinc-950 border-t border-zinc-800/80">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12 space-y-3">
-                <span class="text-amber-400 font-bold text-xs uppercase tracking-widest block">Mensajes de Ánimo</span>
-                <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-white">Apoya a Gus</h2>
-                <p class="text-slate-400 text-sm">Déjale un mensaje motivacional a Gus para sus próximos torneos.</p>
+                <span class="text-gold-400 font-bold text-xs uppercase tracking-widest block">Comunidad y Porra</span>
+                <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-white">Muro de Mensajes para Gus</h2>
+                <p class="text-zinc-400 text-sm">Escríbele palabras de aliento para sus próximos compromisos.</p>
             </div>
 
-            <!-- Form -->
-            <div class="glass-card p-6 sm:p-8 rounded-3xl border border-amber-500/30 mb-8">
+            <div class="glass-card p-6 sm:p-8 rounded-3xl border border-zinc-800 mb-8">
                 <form id="commentForm" onsubmit="handleComment(event)" class="space-y-4">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <input type="text" id="author" required placeholder="Tu Nombre / Municipio" class="bg-mexblack-900 border border-amber-500/30 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-400">
-                        <input type="text" id="message" required placeholder="Escribe tu mensaje de apoyo para Gus..." class="bg-mexblack-900 border border-amber-500/30 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-400">
+                        <input type="text" id="author" required placeholder="Tu Nombre / Municipio" class="bg-zinc-900 border border-zinc-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-400">
+                        <input type="text" id="message" required placeholder="Escribe tu mensaje para Gus..." class="bg-zinc-900 border border-zinc-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-400">
                     </div>
-                    <button type="submit" class="btn-action-primary w-full py-3.5 rounded-xl font-black text-xs uppercase tracking-wider">
-                        <i class="fa-solid fa-paper-plane mr-2"></i>Enviar Mensaje a Gus
+                    <button type="submit" class="btn-gold w-full py-3.5 rounded-xl font-bold text-xs uppercase tracking-wider">
+                        <i class="fa-solid fa-paper-plane mr-2"></i>Publicar Mensaje
                     </button>
                 </form>
             </div>
 
-            <!-- Comment Feed -->
             <div id="commentsFeed" class="space-y-4">
-                <div class="glass-card p-5 rounded-2xl border border-amber-500/20 flex items-start gap-4">
-                    <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-400 font-bold flex items-center justify-center text-sm shrink-0">
+                <div class="glass-card p-5 rounded-2xl border border-zinc-800 flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-full bg-gold-500/20 text-gold-400 font-bold flex items-center justify-center text-sm shrink-0">
                         LB
                     </div>
                     <div>
-                        <h4 class="font-bold text-sm text-white">Levi Báez Mora <span class="text-[10px] bg-amber-500/20 text-amber-400 px-2 py-0.5 rounded-full ml-2">Entrenador</span></h4>
-                        <p class="text-xs text-slate-300 mt-1">&quot;A seguir entrenando duro en el Velódromo, Gus. Tu disciplina y dedicación te llevarán muy lejos.&quot;</p>
+                        <h4 class="font-bold text-sm text-white">Levi Báez Mora <span class="text-[10px] bg-gold-500/20 text-gold-400 px-2 py-0.5 rounded-full ml-2">Entrenador</span></h4>
+                        <p class="text-xs text-zinc-300 mt-1">"A seguir manteniendo esa intensidad en el Velódromo, Gus. Todo esfuerzo rinde sus frutos."</p>
                     </div>
                 </div>
 
-                <div class="glass-card p-5 rounded-2xl border border-amber-500/20 flex items-start gap-4">
-                    <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-400 font-bold flex items-center justify-center text-sm shrink-0">
-                        AV
+                <div class="glass-card p-5 rounded-2xl border border-zinc-800 flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-full bg-gold-500/20 text-gold-400 font-bold flex items-center justify-center text-sm shrink-0">
+                        CP
                     </div>
                     <div>
-                        <h4 class="font-bold text-sm text-white">Afición Veracruzana <span class="text-[10px] bg-mexblack-900 text-slate-400 px-2 py-0.5 rounded-full ml-2">Veracruz</span></h4>
-                        <p class="text-xs text-slate-300 mt-1">&quot;¡Felicidades por tus medallas recientes, Gus! Eres un orgullo para Coatepec y Xalapa.&quot;</p>
+                        <h4 class="font-bold text-sm text-white">Afición Veracruzana <span class="text-[10px] bg-zinc-800 text-zinc-400 px-2 py-0.5 rounded-full ml-2">Veracruz</span></h4>
+                        <p class="text-xs text-zinc-300 mt-1">"¡Mucho éxito en tus próximos torneos, Gus! Eres un orgullo para Coatepec y todo el estado."</p>
                     </div>
                 </div>
             </div>
@@ -643,24 +665,24 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-mexblack-950 py-10 border-t border-amber-500/20 text-center text-xs text-slate-500">
+    <footer class="bg-zinc-950 py-10 border-t border-zinc-900 text-center text-xs text-zinc-500">
         <div class="max-w-7xl mx-auto px-4 space-y-3">
-            <p class="text-slate-300 font-bold">Gustavo Khiram Ortiz Palacios (&quot;Gus&quot;) &bull; Tenis de Mesa Sub-11 Veracruz</p>
-            <p>Entrenamiento Oficial en el Velódromo de Xalapa junto al Entrenador Levi Báez Mora.</p>
-            <p class="text-[10px] text-slate-600">&copy; 2026 Sitio Oficial de Representación Deportiva.</p>
+            <p class="text-zinc-300 font-bold">Gustavo Khiram Ortiz Palacios &bull; Tenis de Mesa Sub-11 México</p>
+            <p>Entrenamiento Oficial en el Velódromo de Xalapa bajo la dirección del Entrenador Levi Báez Mora.</p>
+            <p class="text-[10px] text-zinc-600">&copy; Sitio Oficial de Representación Deportiva.</p>
         </div>
     </footer>
 
     <!-- JS Logic -->
     <script>
-        // Mobile Navigation Toggle
+        // Mobile Menu
         const mobileBtn = document.getElementById('mobileBtn');
         const mobileMenu = document.getElementById('mobileMenu');
         mobileBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Add Comment Function
+        // Add Comment
         function handleComment(e) {
             e.preventDefault();
             const author = document.getElementById('author').value;
@@ -668,18 +690,36 @@
 
             const feed = document.getElementById('commentsFeed');
             const card = `
-                <div class="glass-card p-5 rounded-2xl border border-amber-500/40 flex items-start gap-4">
-                    <div class="w-10 h-10 rounded-full bg-amber-500 text-slate-950 font-bold flex items-center justify-center text-sm shrink-0">
+                <div class="glass-card p-5 rounded-2xl border border-gold-500/30 flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-full bg-gold-400 text-zinc-950 font-bold flex items-center justify-center text-sm shrink-0">
                         ${author.substring(0, 2).toUpperCase()}
                     </div>
                     <div>
-                        <h4 class="font-bold text-sm text-white">${author} <span class="text-[10px] bg-amber-500/20 text-amber-400 px-2 py-0.5 rounded-full ml-2">Nuevo</span></h4>
-                        <p class="text-xs text-slate-300 mt-1">${message}</p>
+                        <h4 class="font-bold text-sm text-white">${author} <span class="text-[10px] bg-gold-500/20 text-gold-400 px-2 py-0.5 rounded-full ml-2">Nuevo</span></h4>
+                        <p class="text-xs text-zinc-300 mt-1">${message}</p>
                     </div>
                 </div>
             `;
             feed.insertAdjacentHTML('afterbegin', card);
             document.getElementById('commentForm').reset();
+        }
+
+        // Copy Contact Info
+        function copyContactInfo() {
+            const info = "Atleta: Gustavo Khiram Ortiz Palacios (Gus)\nCategoría: Sub-11 Tenis de Mesa\nSede de Entrenamiento: Velódromo de Xalapa, Veracruz\nEntrenador: Levi Báez Mora";
+            
+            const el = document.createElement('textarea');
+            el.value = info;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+
+            const toast = document.getElementById('copyToast');
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 3000);
         }
     </script>
 </body>
