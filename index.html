@@ -40,7 +40,6 @@
             color: #f4f4f5;
         }
 
-        /* Ambient Glow Effects - Black & Gold Theme */
         .glow-orb-gold {
             background: radial-gradient(circle, rgba(234, 179, 8, 0.22) 0%, rgba(9, 9, 11, 0) 75%);
         }
@@ -48,7 +47,6 @@
             background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, rgba(9, 9, 11, 0) 70%);
         }
 
-        /* Glassmorphism Panels */
         .glass-card {
             background: rgba(24, 24, 27, 0.75);
             backdrop-filter: blur(16px);
@@ -56,14 +54,12 @@
             border: 1px solid rgba(234, 179, 8, 0.18);
         }
 
-        /* Text Gradients */
         .text-gradient-gold {
             background: linear-gradient(135deg, #ffffff 0%, #facc15 50%, #ca8a04 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        /* Primary Button */
         .btn-gold {
             background: linear-gradient(135deg, #facc15 0%, #ca8a04 100%);
             color: #09090b;
@@ -75,7 +71,6 @@
             box-shadow: 0 15px 30px -5px rgba(234, 179, 8, 0.6);
         }
 
-        /* Outline Button */
         .btn-gold-outline {
             border: 1px solid rgba(250, 204, 21, 0.6);
             color: #facc15;
@@ -149,11 +144,9 @@
     <!-- HERO SECTION -->
     <section id="inicio" class="min-h-screen pt-28 pb-20 relative flex items-center justify-center overflow-hidden">
         
-        <!-- Ambient Orbs -->
         <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] glow-orb-gold rounded-full pointer-events-none opacity-80"></div>
         <div class="absolute bottom-10 right-10 w-[400px] h-[400px] glow-orb-white rounded-full pointer-events-none opacity-30"></div>
 
-        <!-- Background Image Overlay -->
         <div class="absolute inset-0 z-0">
             <img src="gustavo-hero.jpg" alt="Gustavo Khiram Ortiz Palacios" class="w-full h-full object-cover object-center opacity-20 filter contrast-125" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534158914592-062992fbe900?q=80&w=1600&auto=format&fit=crop';">
             <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-zinc-950/90"></div>
@@ -161,7 +154,6 @@
 
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-8">
             
-            <!-- Category Badge -->
             <div class="inline-flex items-center gap-3 px-6 py-2.5 rounded-full glass-card border border-gold-500/30 shadow-2xl">
                 <span class="w-2.5 h-2.5 rounded-full bg-gold-400 animate-pulse"></span>
                 <span class="text-xs sm:text-sm font-black tracking-widest text-zinc-200 uppercase">
@@ -169,10 +161,10 @@
                 </span>
             </div>
 
-            <!-- GIANT TYPOGRAPHY HEADLINE -->
+            <!-- TITULAR PRINCIPAL EN ESPAÑOL -->
             <div class="space-y-2">
                 <h1 class="text-4xl sm:text-7xl lg:text-8xl font-display font-black tracking-tight text-white leading-none uppercase">
-                    PASSION & <br>
+                    PASIÓN Y <br>
                     <span class="text-gradient-gold drop-shadow-[0_10px_25px_rgba(234,179,8,0.3)]">DISCIPLINA</span>
                     <span class="text-white block sm:inline"> EN CADA SAQUE</span>
                 </h1>
@@ -185,7 +177,6 @@
                 A sus 11 años, Gus se ha posicionado en el <strong class="text-gold-400">#72 del Ranking Nacional</strong> (1372 pts), siendo multimedallista en los Juegos Nacionales CONADE, seleccionado mexicano para Panamericanos (Rep. Dominicana) y Centroamericanos (Belice), y embajador de la marca alemana <strong class="text-white">GEWO</strong>.
             </p>
 
-            <!-- CTA Primary Buttons -->
             <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a href="#prensa" class="btn-gold w-full sm:w-auto px-8 py-4 rounded-full font-black text-sm uppercase tracking-wider flex items-center justify-center gap-3">
                     <i class="fa-solid fa-play"></i>
@@ -197,7 +188,6 @@
                 </a>
             </div>
 
-            <!-- Quick Stats Counters -->
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-10 max-w-4xl mx-auto">
                 <div class="glass-card p-5 rounded-2xl text-center border-t-2 border-gold-400">
                     <span class="block font-display text-2xl sm:text-3xl lg:text-4xl font-black text-gold-400 truncate">#72</span>
@@ -256,7 +246,7 @@
                         </div>
                     </div>
 
-                    <!-- Photo Container -->
+                    <!-- Foto de Podio con fallback ordenado -->
                     <div class="lg:col-span-5">
                         <div class="relative rounded-2xl overflow-hidden border border-gold-500/40 shadow-2xl group">
                             <img src="sfs.png" alt="Podio Gustavo Ortiz Toluca 2025" class="w-full h-80 object-cover object-center group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='sfs.jpg';">
@@ -345,7 +335,6 @@
                 </h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     
-                    <!-- Article Card 1 -->
                     <div class="glass-card rounded-2xl overflow-hidden border border-zinc-800 group hover:border-gold-500/40 transition-all">
                         <div class="h-48 overflow-hidden relative">
                             <img src="mdfdb.png" alt="Ocho medallas para Veracruz CONADE 2024" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.onerror=null; this.src='mdfdb.jpg';">
@@ -357,7 +346,6 @@
                         </div>
                     </div>
 
-                    <!-- Article Card 2 -->
                     <div class="glass-card rounded-2xl overflow-hidden border border-zinc-800 group hover:border-gold-500/40 transition-all">
                         <div class="h-48 overflow-hidden relative">
                             <img src="pana.png" alt="Panamericano U-15 RTV" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.onerror=null; this.src='pana.jpg';">
@@ -369,7 +357,6 @@
                         </div>
                     </div>
 
-                    <!-- Article Card 3 -->
                     <div class="glass-card rounded-2xl overflow-hidden border border-zinc-800 group hover:border-gold-500/40 transition-all">
                         <div class="h-48 overflow-hidden relative">
                             <img src="macro.png" alt="Carro Completo Tenis de Mesa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.onerror=null; this.src='macro.jpg';">
@@ -381,7 +368,6 @@
                         </div>
                     </div>
 
-                    <!-- Article Card 4 -->
                     <div class="glass-card rounded-2xl overflow-hidden border border-zinc-800 group hover:border-gold-500/40 transition-all">
                         <div class="h-48 overflow-hidden relative">
                             <img src="mencion.png" alt="Mención Imagen Veracruz" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.onerror=null; this.src='mencion.jpg';">
@@ -419,7 +405,6 @@
 
             <!-- Gallery Grid -->
             <div id="galleryGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                <!-- Group camp2025 -->
                 <div class="gallery-item camp2025 glass-card rounded-2xl p-2 border border-zinc-800 overflow-hidden">
                     <img src="camp251.jpg" alt="Campeonatos 2025 - 1" class="w-full h-52 object-cover rounded-xl" onerror="this.onerror=null; this.src='podium.png';">
                 </div>
@@ -430,7 +415,6 @@
                     <img src="camp253.jpg" alt="Campeonatos 2025 - 3" class="w-full h-52 object-cover rounded-xl" onerror="this.onerror=null; this.src='seleccion.png';">
                 </div>
 
-                <!-- Group cent2026 -->
                 <div class="gallery-item cent2026 hidden glass-card rounded-2xl p-2 border border-zinc-800 overflow-hidden">
                     <img src="cent261.jpg" alt="Centroamericanos - 1" class="w-full h-52 object-cover rounded-xl" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534158914592-062992fbe900?q=80&w=800&auto=format&fit=crop';">
                 </div>
@@ -438,7 +422,6 @@
                     <img src="cent262.jpg" alt="Centroamericanos - 2" class="w-full h-52 object-cover rounded-xl" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511067007398-7e4b90cfa4bc?q=80&w=800&auto=format&fit=crop';">
                 </div>
 
-                <!-- Group cona2024 -->
                 <div class="gallery-item cona2024 hidden glass-card rounded-2xl p-2 border border-zinc-800 overflow-hidden">
                     <img src="cona241.jpg" alt="CONADE 2024 - 1" class="w-full h-52 object-cover rounded-xl" onerror="this.onerror=null; this.src='mdfdb.png';">
                 </div>
@@ -446,7 +429,6 @@
                     <img src="cona242.jpg" alt="CONADE 2024 - 2" class="w-full h-52 object-cover rounded-xl" onerror="this.onerror=null; this.src='pana.png';">
                 </div>
 
-                <!-- Group cona2026 -->
                 <div class="gallery-item cona2026 hidden glass-card rounded-2xl p-2 border border-zinc-800 overflow-hidden">
                     <img src="cona261.jpg" alt="CONADE 2026 - 1" class="w-full h-52 object-cover rounded-xl" onerror="this.onerror=null; this.src='macro.png';">
                 </div>
@@ -454,12 +436,11 @@
                     <img src="cona262.jpg" alt="CONADE 2026 - 2" class="w-full h-52 object-cover rounded-xl" onerror="this.onerror=null; this.src='mencion.png';">
                 </div>
 
-                <!-- Group open2026 -->
                 <div class="gallery-item open2026 hidden glass-card rounded-2xl p-2 border border-zinc-800 overflow-hidden">
                     <img src="open261.jpg" alt="OPEN 2026 - 1" class="w-full h-52 object-cover rounded-xl" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=800&auto=format&fit=crop';">
                 </div>
                 <div class="gallery-item open2026 hidden glass-card rounded-2xl p-2 border border-zinc-800 overflow-hidden">
-                    <img src="open262.jpg" alt="OPEN 2026 - 2" class="w-full h-52 object-cover rounded-xl" onerror="this.onerror=null; this.src='triunfo-reciente.jpg';">
+                    <img src="open262.jpg" alt="OPEN 2026 - 2" class="w-full h-52 object-cover rounded-xl" onerror="this.onerror=null; this.src='sfs.png';">
                 </div>
             </div>
         </div>
@@ -475,10 +456,8 @@
                 <div class="w-20 h-1.5 bg-gradient-to-r from-gold-400 to-amber-600 mx-auto rounded-full"></div>
             </div>
 
-            <!-- Timeline -->
             <div class="relative border-l-2 border-gold-500/30 ml-4 sm:ml-32 space-y-12">
 
-                <!-- Timeline Item 1 -->
                 <div class="relative pl-8 sm:pl-12 group">
                     <div class="hidden sm:block absolute -left-32 top-0 text-right w-24 text-xs font-bold text-gold-400 uppercase tracking-widest pt-1">
                         Sept 2023
@@ -493,7 +472,6 @@
                     </div>
                 </div>
 
-                <!-- Timeline Item 2 -->
                 <div class="relative pl-8 sm:pl-12 group">
                     <div class="hidden sm:block absolute -left-32 top-0 text-right w-24 text-xs font-bold text-gold-400 uppercase tracking-widest pt-1">
                         Año 2024
@@ -508,7 +486,6 @@
                     </div>
                 </div>
 
-                <!-- Timeline Item 3 -->
                 <div class="relative pl-8 sm:pl-12 group">
                     <div class="hidden sm:block absolute -left-32 top-0 text-right w-24 text-xs font-bold text-gold-400 uppercase tracking-widest pt-1">
                         Abril 2025
@@ -523,7 +500,6 @@
                     </div>
                 </div>
 
-                <!-- Timeline Item 4 -->
                 <div class="relative pl-8 sm:pl-12 group">
                     <div class="hidden sm:block absolute -left-32 top-0 text-right w-24 text-xs font-bold text-gold-400 uppercase tracking-widest pt-1">
                         Agosto 2025
@@ -554,7 +530,6 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 
-                <!-- Coach 1: Levi Báez Mora -->
                 <div class="glass-card p-8 rounded-3xl border border-gold-500/30 space-y-4">
                     <div class="flex items-center gap-4">
                         <div class="w-16 h-16 rounded-2xl bg-gold-500/20 text-gold-400 flex items-center justify-center font-black text-2xl border border-gold-400/30">
@@ -570,7 +545,6 @@
                     </p>
                 </div>
 
-                <!-- Coach 2: Juan José López Sánchez -->
                 <div class="glass-card p-8 rounded-3xl border border-gold-500/30 space-y-4">
                     <div class="flex items-center gap-4">
                         <div class="w-16 h-16 rounded-2xl bg-gold-500/20 text-gold-400 flex items-center justify-center font-black text-2xl border border-gold-400/30">
@@ -650,7 +624,6 @@
                 <div class="w-24 h-1.5 bg-gradient-to-r from-gold-400 to-amber-600 mx-auto rounded-full"></div>
             </div>
 
-            <!-- Contribution Ways Cards -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
                 <div class="glass-card p-8 rounded-3xl border border-gold-500/30 flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
@@ -698,7 +671,6 @@
                 </div>
             </div>
 
-            <!-- Direct Contact Box -->
             <div class="glass-card p-8 rounded-3xl border border-gold-500/40 max-w-3xl mx-auto text-center space-y-6">
                 <h3 class="text-2xl font-display font-bold text-white">¿Te gustaría colaborar o ser patrocinador?</h3>
                 <p class="text-xs sm:text-sm text-zinc-300">
@@ -776,14 +748,12 @@
 
     <!-- JS Logic -->
     <script>
-        // Mobile Menu
         const mobileBtn = document.getElementById('mobileBtn');
         const mobileMenu = document.getElementById('mobileMenu');
         mobileBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Add Comment
         function handleComment(e) {
             e.preventDefault();
             const author = document.getElementById('author').value;
@@ -805,7 +775,6 @@
             document.getElementById('commentForm').reset();
         }
 
-        // Copy Contact Info
         function copyContactInfo() {
             const info = "Atleta: Gustavo Khiram Ortiz Palacios (Gus)\nEdad: 11 años | Coatepec, Veracruz\nRanking Nacional: #72 (1372 pts)\nSponsor: GEWO México\nCandidato al Premio Municipal del Deporte 2025\nEntrenadores: Levi Báez Mora / Juan José López Sánchez";
             
@@ -823,7 +792,6 @@
             }, 3000);
         }
 
-        // Gallery Filtering
         function filterGallery(category) {
             const items = document.querySelectorAll('.gallery-item');
             const buttons = document.querySelectorAll('.tab-btn');
