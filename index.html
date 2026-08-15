@@ -43,9 +43,6 @@
         .glow-orb-gold {
             background: radial-gradient(circle, rgba(234, 179, 8, 0.22) 0%, rgba(9, 9, 11, 0) 75%);
         }
-        .glow-orb-white {
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, rgba(9, 9, 11, 0) 70%);
-        }
 
         .glass-card {
             background: rgba(24, 24, 27, 0.75);
@@ -426,72 +423,197 @@
 
             <!-- Tab Buttons -->
             <div class="flex flex-wrap items-center justify-center gap-2 mb-10">
-                <button onclick="filterGallery('camp2025')" class="tab-btn active px-5 py-2.5 rounded-full border border-zinc-700 text-xs font-bold uppercase tracking-wider transition-all">Campeonatos 2025</button>
-                <button onclick="filterGallery('cent2026')" class="tab-btn px-5 py-2.5 rounded-full border border-zinc-700 text-xs font-bold uppercase tracking-wider transition-all">Centroamericanos</button>
-                <button onclick="filterGallery('cona2024')" class="tab-btn px-5 py-2.5 rounded-full border border-zinc-700 text-xs font-bold uppercase tracking-wider transition-all">CONADE 2024</button>
-                <button onclick="filterGallery('cona2026')" class="tab-btn px-5 py-2.5 rounded-full border border-zinc-700 text-xs font-bold uppercase tracking-wider transition-all">CONADE 2026</button>
-                <button onclick="filterGallery('open2026')" class="tab-btn px-5 py-2.5 rounded-full border border-zinc-700 text-xs font-bold uppercase tracking-wider transition-all">OPEN 2026</button>
+                <button onclick="filterGallery('camp2025', this)" class="tab-btn active px-5 py-2.5 rounded-full border border-zinc-700 text-xs font-bold uppercase tracking-wider transition-all">Campeonatos 2025</button>
+                <button onclick="filterGallery('cent2026', this)" class="tab-btn px-5 py-2.5 rounded-full border border-zinc-700 text-xs font-bold uppercase tracking-wider transition-all">Centroamericanos</button>
+                <button onclick="filterGallery('cona2024', this)" class="tab-btn px-5 py-2.5 rounded-full border border-zinc-700 text-xs font-bold uppercase tracking-wider transition-all">CONADE 2024</button>
+                <button onclick="filterGallery('cona2026', this)" class="tab-btn px-5 py-2.5 rounded-full border border-zinc-700 text-xs font-bold uppercase tracking-wider transition-all">CONADE 2026</button>
+                <button onclick="filterGallery('open2026', this)" class="tab-btn px-5 py-2.5 rounded-full border border-zinc-700 text-xs font-bold uppercase tracking-wider transition-all">OPEN 2026</button>
             </div>
 
-            <!-- Gallery Grid -->
-            <div id="galleryGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                
-                <!-- CAMPEONATOS 2025 -->
-                <div class="gallery-item camp2025 glass-card rounded-2xl p-2 border border-zinc-800 overflow-hidden">
-                    <img src="campeonatos2025/camp25-1.jpg" alt="Campeonatos 2025 - 1" class="w-full h-52 object-cover rounded-xl" onerror="this.onerror=null; this.src='podium.png';">
-                </div>
-                <div class="gallery-item camp2025 glass-card rounded-2xl p-2 border border-zinc-800 overflow-hidden">
-                    <img src="campeonatos2025/camp25-2.jpg" alt="Campeonatos 2025 - 2" class="w-full h-52 object-cover rounded-xl" onerror="this.onerror=null; this.src='sfs.png';">
-                </div>
-                <div class="gallery-item camp2025 glass-card rounded-2xl p-2 border border-zinc-800 overflow-hidden">
-                    <img src="campeonatos2025/camp25-3.jpg" alt="Campeonatos 2025 - 3" class="w-full h-52 object-cover rounded-xl" onerror="this.onerror=null; this.src='gustavo-hero.jpg';">
-                </div>
+            <!-- TABS DE GALERÍA -->
+            <div id="galleryTabsContainer">
 
-                <!-- CENTROAMERICANOS -->
-                <div class="gallery-item cent2026 hidden glass-card rounded-2xl p-2 border border-zinc-800 overflow-hidden">
-                    <img src="centroamericanos/cent26-1.jpg" alt="Centroamericanos - 1" class="w-full h-52 object-cover rounded-xl" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534158914592-062992fbe900?q=80&w=800&auto=format&fit=crop';">
-                </div>
-                <div class="gallery-item cent2026 hidden glass-card rounded-2xl p-2 border border-zinc-800 overflow-hidden">
-                    <img src="centroamericanos/cent26-2.jpg" alt="Centroamericanos - 2" class="w-full h-52 object-cover rounded-xl" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511067007398-7e4b90cfa4bc?q=80&w=800&auto=format&fit=crop';">
-                </div>
-
-                <!-- CONADE 2024 (VIDEO + FOTOS) -->
-                <div class="gallery-item cona2024 hidden sm:col-span-2 glass-card rounded-2xl p-2 border border-gold-500/40 overflow-hidden">
-                    <div class="aspect-video bg-zinc-950 rounded-xl overflow-hidden w-full h-full">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/zquI99P_drs" title="Video CONADE 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <!-- 1. CAMPEONATOS 2025 -->
+                <div id="tab-camp2025" class="tab-pane">
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                        <div class="glass-card p-2 rounded-2xl border border-zinc-800 overflow-hidden">
+                            <img src="campeonatos2025/camp25-1.jpg" alt="Campeonatos 2025 - 1" class="w-full h-52 object-cover rounded-xl" onerror="this.onerror=null; this.src='podium.png';">
+                        </div>
+                        <div class="glass-card p-2 rounded-2xl border border-zinc-800 overflow-hidden">
+                            <img src="campeonatos2025/camp25-2.jpg" alt="Campeonatos 2025 - 2" class="w-full h-52 object-cover rounded-xl" onerror="this.onerror=null; this.src='sfs.png';">
+                        </div>
+                        <div class="glass-card p-2 rounded-2xl border border-zinc-800 overflow-hidden">
+                            <img src="campeonatos2025/camp25-3.jpg" alt="Campeonatos 2025 - 3" class="w-full h-52 object-cover rounded-xl" onerror="this.onerror=null; this.src='gustavo-hero.jpg';">
+                        </div>
+                        <div class="glass-card p-2 rounded-2xl border border-zinc-800 overflow-hidden">
+                            <img src="campeonatos2025/camp25-4.jpg" alt="Campeonatos 2025 - 4" class="w-full h-52 object-cover rounded-xl" onerror="this.onerror=null; this.src='podium.png';">
+                        </div>
+                        <div class="glass-card p-2 rounded-2xl border border-zinc-800 overflow-hidden">
+                            <img src="campeonatos2025/camp25-5.jpg" alt="Campeonatos 2025 - 5" class="w-full h-52 object-cover rounded-xl" onerror="this.onerror=null; this.src='sfs.png';">
+                        </div>
+                        <div class="glass-card p-2 rounded-2xl border border-zinc-800 overflow-hidden">
+                            <img src="campeonatos2025/camp25-6.jpg" alt="Campeonatos 2025 - 6" class="w-full h-52 object-cover rounded-xl" onerror="this.onerror=null; this.src='gustavo-hero.jpg';">
+                        </div>
                     </div>
                 </div>
-                <div class="gallery-item cona2024 hidden glass-card rounded-2xl p-2 border border-zinc-800 overflow-hidden">
-                    <img src="conade2024/cona24-1.jpg" alt="CONADE 2024 - 1" class="w-full h-52 object-cover rounded-xl" onerror="this.onerror=null; this.src='podium.png';">
-                </div>
-                <div class="gallery-item cona2024 hidden glass-card rounded-2xl p-2 border border-zinc-800 overflow-hidden">
-                    <img src="conade2024/cona24-2.jpg" alt="CONADE 2024 - 2" class="w-full h-52 object-cover rounded-xl" onerror="this.onerror=null; this.src='gustavo-hero.jpg';">
-                </div>
 
-                <!-- CONADE 2026 (VIDEO + FOTOS) -->
-                <div class="gallery-item cona2026 hidden sm:col-span-2 glass-card rounded-2xl p-2 border border-gold-500/40 overflow-hidden">
-                    <div class="aspect-video bg-zinc-950 rounded-xl overflow-hidden w-full h-full">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/ooaNJ8cgKk4" title="Video CONADE 2026" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <!-- 2. CENTROAMERICANOS -->
+                <div id="tab-cent2026" class="tab-pane hidden">
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                        <div class="glass-card p-2 rounded-2xl border border-zinc-800 overflow-hidden">
+                            <img src="centroamericanos/cent26-1.jpg" alt="Centroamericanos - 1" class="w-full h-52 object-cover rounded-xl" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534158914592-062992fbe900?q=80&w=800&auto=format&fit=crop';">
+                        </div>
+                        <div class="glass-card p-2 rounded-2xl border border-zinc-800 overflow-hidden">
+                            <img src="centroamericanos/cent26-2.jpg" alt="Centroamericanos - 2" class="w-full h-52 object-cover rounded-xl" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511067007398-7e4b90cfa4bc?q=80&w=800&auto=format&fit=crop';">
+                        </div>
+                        <div class="glass-card p-2 rounded-2xl border border-zinc-800 overflow-hidden">
+                            <img src="centroamericanos/cent26-3.jpg" alt="Centroamericanos - 3" class="w-full h-52 object-cover rounded-xl" onerror="this.onerror=null; this.src='podium.png';">
+                        </div>
+                        <div class="glass-card p-2 rounded-2xl border border-zinc-800 overflow-hidden">
+                            <img src="centroamericanos/cent26-4.jpg" alt="Centroamericanos - 4" class="w-full h-52 object-cover rounded-xl" onerror="this.onerror=null; this.src='sfs.png';">
+                        </div>
+                        <div class="glass-card p-2 rounded-2xl border border-zinc-800 overflow-hidden">
+                            <img src="centroamericanos/cent26-5.jpg" alt="Centroamericanos - 5" class="w-full h-52 object-cover rounded-xl" onerror="this.onerror=null; this.src='gustavo-hero.jpg';">
+                        </div>
+                        <div class="glass-card p-2 rounded-2xl border border-zinc-800 overflow-hidden">
+                            <img src="centroamericanos/cent26-6.jpg" alt="Centroamericanos - 6" class="w-full h-52 object-cover rounded-xl" onerror="this.onerror=null; this.src='podium.png';">
+                        </div>
                     </div>
                 </div>
-                <div class="gallery-item cona2026 hidden glass-card rounded-2xl p-2 border border-zinc-800 overflow-hidden">
-                    <img src="conade2026/cona26-1.jpg" alt="CONADE 2026 - 1" class="w-full h-52 object-cover rounded-xl" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=800&auto=format&fit=crop';">
-                </div>
-                <div class="gallery-item cona2026 hidden glass-card rounded-2xl p-2 border border-zinc-800 overflow-hidden">
-                    <img src="conade2026/cona26-2.jpg" alt="CONADE 2026 - 2" class="w-full h-52 object-cover rounded-xl" onerror="this.onerror=null; this.src='podium.png';">
-                </div>
 
-                <!-- OPEN 2026 (VIDEO + FOTOS) -->
-                <div class="gallery-item open2026 hidden sm:col-span-2 glass-card rounded-2xl p-2 border border-gold-500/40 overflow-hidden">
-                    <div class="aspect-video bg-zinc-950 rounded-xl overflow-hidden w-full h-full">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/KNT0S49MehE" title="Video OPEN 2026" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <!-- 3. CONADE 2024 (FOTOS A LA IZQ EN 2 COLS + MARCO VIDEO A LA DER) -->
+                <div id="tab-cona2024" class="tab-pane hidden">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+                        <!-- Columna de Fotos (2 por fila) -->
+                        <div class="lg:col-span-7 grid grid-cols-2 gap-4">
+                            <div class="glass-card p-2 rounded-2xl border border-zinc-800 overflow-hidden">
+                                <img src="conade2024/cona24-1.jpg" alt="CONADE 2024 - 1" class="w-full h-48 sm:h-56 object-cover rounded-xl" onerror="this.onerror=null; this.src='podium.png';">
+                            </div>
+                            <div class="glass-card p-2 rounded-2xl border border-zinc-800 overflow-hidden">
+                                <img src="conade2024/cona24-2.jpg" alt="CONADE 2024 - 2" class="w-full h-48 sm:h-56 object-cover rounded-xl" onerror="this.onerror=null; this.src='gustavo-hero.jpg';">
+                            </div>
+                            <div class="glass-card p-2 rounded-2xl border border-zinc-800 overflow-hidden">
+                                <img src="conade2024/cona24-3.jpg" alt="CONADE 2024 - 3" class="w-full h-48 sm:h-56 object-cover rounded-xl" onerror="this.onerror=null; this.src='sfs.png';">
+                            </div>
+                            <div class="glass-card p-2 rounded-2xl border border-zinc-800 overflow-hidden">
+                                <img src="conade2024/cona24-4.jpg" alt="CONADE 2024 - 4" class="w-full h-48 sm:h-56 object-cover rounded-xl" onerror="this.onerror=null; this.src='podium.png';">
+                            </div>
+                            <div class="glass-card p-2 rounded-2xl border border-zinc-800 overflow-hidden">
+                                <img src="conade2024/cona24-5.jpg" alt="CONADE 2024 - 5" class="w-full h-48 sm:h-56 object-cover rounded-xl" onerror="this.onerror=null; this.src='gustavo-hero.jpg';">
+                            </div>
+                            <div class="glass-card p-2 rounded-2xl border border-zinc-800 overflow-hidden">
+                                <img src="conade2024/cona24-6.jpg" alt="CONADE 2024 - 6" class="w-full h-48 sm:h-56 object-cover rounded-xl" onerror="this.onerror=null; this.src='sfs.png';">
+                            </div>
+                        </div>
+
+                        <!-- Marco del Video a la Derecha -->
+                        <div class="lg:col-span-5 lg:sticky lg:top-28">
+                            <div class="glass-card p-4 rounded-3xl border border-gold-500/40 shadow-2xl space-y-3">
+                                <div class="flex items-center justify-between px-1">
+                                    <span class="text-xs font-bold text-gold-400 flex items-center gap-1.5 uppercase">
+                                        <i class="fa-brands fa-youtube text-red-500 text-base"></i> Video del Evento
+                                    </span>
+                                    <span class="text-[10px] bg-gold-500/20 text-gold-400 px-2.5 py-0.5 rounded-full font-bold">CONADE 2024</span>
+                                </div>
+                                <div class="aspect-video bg-zinc-950 rounded-2xl overflow-hidden border border-zinc-800">
+                                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/zquI99P_drs" title="Video CONADE 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                </div>
+                                <p class="text-xs text-zinc-400 text-center pt-1">
+                                    Resumen en video de la participación de Gus en los Juegos Nacionales CONADE 2024.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="gallery-item open2026 hidden glass-card rounded-2xl p-2 border border-zinc-800 overflow-hidden">
-                    <img src="open2026/open26-1.jpg" alt="OPEN 2026 - 1" class="w-full h-52 object-cover rounded-xl" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=800&auto=format&fit=crop';">
+
+                <!-- 4. CONADE 2026 (FOTOS A LA IZQ EN 2 COLS + MARCO VIDEO A LA DER) -->
+                <div id="tab-cona2026" class="tab-pane hidden">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+                        <!-- Columna de Fotos (2 por fila) -->
+                        <div class="lg:col-span-7 grid grid-cols-2 gap-4">
+                            <div class="glass-card p-2 rounded-2xl border border-zinc-800 overflow-hidden">
+                                <img src="conade2026/cona26-1.jpg" alt="CONADE 2026 - 1" class="w-full h-48 sm:h-56 object-cover rounded-xl" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=800&auto=format&fit=crop';">
+                            </div>
+                            <div class="glass-card p-2 rounded-2xl border border-zinc-800 overflow-hidden">
+                                <img src="conade2026/cona26-2.jpg" alt="CONADE 2026 - 2" class="w-full h-48 sm:h-56 object-cover rounded-xl" onerror="this.onerror=null; this.src='podium.png';">
+                            </div>
+                            <div class="glass-card p-2 rounded-2xl border border-zinc-800 overflow-hidden">
+                                <img src="conade2026/cona26-3.jpg" alt="CONADE 2026 - 3" class="w-full h-48 sm:h-56 object-cover rounded-xl" onerror="this.onerror=null; this.src='gustavo-hero.jpg';">
+                            </div>
+                            <div class="glass-card p-2 rounded-2xl border border-zinc-800 overflow-hidden">
+                                <img src="conade2026/cona26-4.jpg" alt="CONADE 2026 - 4" class="w-full h-48 sm:h-56 object-cover rounded-xl" onerror="this.onerror=null; this.src='sfs.png';">
+                            </div>
+                            <div class="glass-card p-2 rounded-2xl border border-zinc-800 overflow-hidden">
+                                <img src="conade2026/cona26-5.jpg" alt="CONADE 2026 - 5" class="w-full h-48 sm:h-56 object-cover rounded-xl" onerror="this.onerror=null; this.src='podium.png';">
+                            </div>
+                            <div class="glass-card p-2 rounded-2xl border border-zinc-800 overflow-hidden">
+                                <img src="conade2026/cona26-6.jpg" alt="CONADE 2026 - 6" class="w-full h-48 sm:h-56 object-cover rounded-xl" onerror="this.onerror=null; this.src='gustavo-hero.jpg';">
+                            </div>
+                        </div>
+
+                        <!-- Marco del Video a la Derecha -->
+                        <div class="lg:col-span-5 lg:sticky lg:top-28">
+                            <div class="glass-card p-4 rounded-3xl border border-gold-500/40 shadow-2xl space-y-3">
+                                <div class="flex items-center justify-between px-1">
+                                    <span class="text-xs font-bold text-gold-400 flex items-center gap-1.5 uppercase">
+                                        <i class="fa-brands fa-youtube text-red-500 text-base"></i> Video del Evento
+                                    </span>
+                                    <span class="text-[10px] bg-gold-500/20 text-gold-400 px-2.5 py-0.5 rounded-full font-bold">CONADE 2026</span>
+                                </div>
+                                <div class="aspect-video bg-zinc-950 rounded-2xl overflow-hidden border border-zinc-800">
+                                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/ooaNJ8cgKk4" title="Video CONADE 2026" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                </div>
+                                <p class="text-xs text-zinc-400 text-center pt-1">
+                                    Medalla de ORO por Equipos Sub-13 Varonil en los Juegos Nacionales CONADE Puebla 2026.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="gallery-item open2026 hidden glass-card rounded-2xl p-2 border border-zinc-800 overflow-hidden">
-                    <img src="open2026/open26-2.jpg" alt="OPEN 2026 - 2" class="w-full h-52 object-cover rounded-xl" onerror="this.onerror=null; this.src='podium.png';">
+
+                <!-- 5. OPEN 2026 (FOTOS A LA IZQ EN 2 COLS + MARCO VIDEO A LA DER) -->
+                <div id="tab-open2026" class="tab-pane hidden">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+                        <!-- Columna de Fotos (2 por fila) -->
+                        <div class="lg:col-span-7 grid grid-cols-2 gap-4">
+                            <div class="glass-card p-2 rounded-2xl border border-zinc-800 overflow-hidden">
+                                <img src="open2026/open26-1.jpg" alt="OPEN 2026 - 1" class="w-full h-48 sm:h-56 object-cover rounded-xl" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=800&auto=format&fit=crop';">
+                            </div>
+                            <div class="glass-card p-2 rounded-2xl border border-zinc-800 overflow-hidden">
+                                <img src="open2026/open26-2.jpg" alt="OPEN 2026 - 2" class="w-full h-48 sm:h-56 object-cover rounded-xl" onerror="this.onerror=null; this.src='podium.png';">
+                            </div>
+                            <div class="glass-card p-2 rounded-2xl border border-zinc-800 overflow-hidden">
+                                <img src="open2026/open26-3.jpg" alt="OPEN 2026 - 3" class="w-full h-48 sm:h-56 object-cover rounded-xl" onerror="this.onerror=null; this.src='gustavo-hero.jpg';">
+                            </div>
+                            <div class="glass-card p-2 rounded-2xl border border-zinc-800 overflow-hidden">
+                                <img src="open2026/open26-4.jpg" alt="OPEN 2026 - 4" class="w-full h-48 sm:h-56 object-cover rounded-xl" onerror="this.onerror=null; this.src='sfs.png';">
+                            </div>
+                            <div class="glass-card p-2 rounded-2xl border border-zinc-800 overflow-hidden">
+                                <img src="open2026/open26-5.jpg" alt="OPEN 2026 - 5" class="w-full h-48 sm:h-56 object-cover rounded-xl" onerror="this.onerror=null; this.src='podium.png';">
+                            </div>
+                            <div class="glass-card p-2 rounded-2xl border border-zinc-800 overflow-hidden">
+                                <img src="open2026/open26-6.jpg" alt="OPEN 2026 - 6" class="w-full h-48 sm:h-56 object-cover rounded-xl" onerror="this.onerror=null; this.src='gustavo-hero.jpg';">
+                            </div>
+                        </div>
+
+                        <!-- Marco del Video a la Derecha -->
+                        <div class="lg:col-span-5 lg:sticky lg:top-28">
+                            <div class="glass-card p-4 rounded-3xl border border-gold-500/40 shadow-2xl space-y-3">
+                                <div class="flex items-center justify-between px-1">
+                                    <span class="text-xs font-bold text-gold-400 flex items-center gap-1.5 uppercase">
+                                        <i class="fa-brands fa-youtube text-red-500 text-base"></i> Video del Evento
+                                    </span>
+                                    <span class="text-[10px] bg-gold-500/20 text-gold-400 px-2.5 py-0.5 rounded-full font-bold">OPEN 2026</span>
+                                </div>
+                                <div class="aspect-video bg-zinc-950 rounded-2xl overflow-hidden border border-zinc-800">
+                                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/KNT0S49MehE" title="Video OPEN 2026" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                </div>
+                                <p class="text-xs text-zinc-400 text-center pt-1">
+                                    Fogueo internacional de Gus Ortiz en el México Open 2026 de Tijuana.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -928,20 +1050,20 @@
             }, 3000);
         }
 
-        function filterGallery(category) {
-            const items = document.querySelectorAll('.gallery-item');
+        function filterGallery(category, btn) {
+            const panes = document.querySelectorAll('.tab-pane');
+            panes.forEach(pane => pane.classList.add('hidden'));
+
+            const activePane = document.getElementById('tab-' + category);
+            if (activePane) {
+                activePane.classList.remove('hidden');
+            }
+
             const buttons = document.querySelectorAll('.tab-btn');
-
-            buttons.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-
-            items.forEach(item => {
-                if (item.classList.contains(category)) {
-                    item.classList.remove('hidden');
-                } else {
-                    item.classList.add('hidden');
-                }
-            });
+            buttons.forEach(b => b.classList.remove('active'));
+            if (btn) {
+                btn.classList.add('active');
+            }
         }
     </script>
 </body>
